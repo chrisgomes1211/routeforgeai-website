@@ -9,7 +9,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
 </head>
 <body>
-  <nav class="nav">
+  <nav class="nav" id="nav">
     <div class="container">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-icon">R</span>
@@ -31,13 +31,16 @@
 
   <section class="hero">
     <div class="hero-bg"></div>
+    <div class="hero-image-overlay" id="heroImage"></div>
     <div class="hero-grid"></div>
     <div class="hero-glow"></div>
+    <div class="hero-glow-2"></div>
+    <div class="particles" id="particles"></div>
     <div class="container">
       <div class="hero-badge animate-in">
-        <span>EU AI Act Compliant</span>
+        <span>&#10003; EU AI Act Compliant &mdash; Built for Dublin F&amp;B</span>
       </div>
-      <h1 class="animate-in animate-in-delay-1">
+      <h1 class="animate-in animate-in-delay-1 glow-text">
         AI shouldn't be a<br><span>luxury</span>
       </h1>
       <p class="animate-in animate-in-delay-2">
@@ -52,23 +55,23 @@
     </div>
   </section>
 
-  <section class="stats-strip">
+  <section class="stats-strip reveal" id="statsSection">
     <div class="container">
       <div class="stats-grid">
         <div class="stat-item">
-          <div class="stat-number">2,000+</div>
+          <div class="stat-number"><span class="stat-counter" data-target="2000">0</span><span class="stat-suffix">+</span></div>
           <div class="stat-label">Dublin F&amp;B SMEs</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">&lt;20%</div>
+          <div class="stat-number">&lt;<span class="stat-counter" data-target="20">0</span><span class="stat-suffix">%</span></div>
           <div class="stat-label">AI Adoption Rate</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">5</div>
+          <div class="stat-number"><span class="stat-counter" data-target="5">0</span></div>
           <div class="stat-label">Specialist AI Agents</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">3</div>
+          <div class="stat-number"><span class="stat-counter" data-target="3">0</span></div>
           <div class="stat-label">Phases to Compliance</div>
         </div>
       </div>
@@ -77,26 +80,29 @@
 
   <section class="section">
     <div class="container">
-      <span class="section-label">The Problem</span>
-      <h2 class="section-title">Why Dublin's F&amp;B SMEs are stuck</h2>
-      <p class="section-subtitle">Despite living in a tech capital, most food and beverage businesses struggle to adopt AI meaningfully.</p>
+      <div class="reveal">
+        <span class="section-label">The Problem</span>
+        <div class="section-divider"></div>
+        <h2 class="section-title">Why Dublin's F&amp;B SMEs are stuck</h2>
+        <p class="section-subtitle">Despite living in a tech capital, most food and beverage businesses struggle to adopt AI meaningfully.</p>
+      </div>
       <div class="problem-grid">
-        <div class="problem-card">
+        <div class="problem-card reveal reveal-delay-1 shine">
           <div class="problem-icon">&#9888;</div>
           <h3>EU AI Act Uncertainty</h3>
           <p>New regulations create confusion. Most SMEs don't know if their AI usage is compliant or what they need to change.</p>
         </div>
-        <div class="problem-card">
+        <div class="problem-card reveal reveal-delay-2 shine">
           <div class="problem-icon">&#128200;</div>
           <h3>No Data Strategy</h3>
           <p>Customer data is siloed across spreadsheets, loyalty cards, and delivery apps. No unified view means no actionable insights.</p>
         </div>
-        <div class="problem-card">
+        <div class="problem-card reveal reveal-delay-3 shine">
           <div class="problem-icon">&#128176;</div>
           <h3>Cost of Entry</h3>
           <p>Enterprise AI solutions are priced for multinationals. Independent restaurants and cafes can't justify the investment.</p>
         </div>
-        <div class="problem-card">
+        <div class="problem-card reveal reveal-delay-4 shine">
           <div class="problem-icon">&#128170;</div>
           <h3>Staff &amp; Skills Gap</h3>
           <p>Hiring data scientists or AI specialists is out of reach. Existing teams are already stretched running daily operations.</p>
@@ -107,21 +113,24 @@
 
   <section class="section section-alt">
     <div class="container">
-      <span class="section-label">The Solution</span>
-      <h2 class="section-title">How RouteForge AI works</h2>
-      <p class="section-subtitle">A three-phase system that takes you from audit to AI-powered growth.</p>
+      <div class="reveal">
+        <span class="section-label">The Solution</span>
+        <div class="section-divider"></div>
+        <h2 class="section-title">How RouteForge AI works</h2>
+        <p class="section-subtitle">A three-phase system that takes you from audit to AI-powered growth.</p>
+      </div>
       <div class="solution-grid">
-        <div class="solution-step">
+        <div class="solution-step reveal reveal-delay-1">
           <div class="step-number">1</div>
           <h3>Assess &amp; Audit</h3>
           <p>Our Researcher Agent analyses your current operations, data maturity, and compliance posture. You get a clear picture of where you stand.</p>
         </div>
-        <div class="solution-step">
+        <div class="solution-step reveal reveal-delay-2">
           <div class="step-number">2</div>
           <h3>Strategise &amp; Build</h3>
           <p>The Designer and Maker agents collaborate to create a tailored AI roadmap. From customer analytics to waste reduction systems &mdash; built for your business.</p>
         </div>
-        <div class="solution-step">
+        <div class="solution-step reveal reveal-delay-3">
           <div class="step-number">3</div>
           <h3>Deploy &amp; Grow</h3>
           <p>The Marketer Agent helps you launch AI-powered campaigns and customer experiences. Continuous evaluation ensures you stay compliant and competitive.</p>
@@ -132,24 +141,52 @@
 
   <section class="section">
     <div class="container">
-      <span class="section-label">Sustainability &amp; Compliance</span>
-      <h2 class="section-title">Built for the EU AI Act</h2>
-      <p class="section-subtitle">RouteForge AI is designed from the ground up to meet European regulatory standards while helping you run a greener business.</p>
+      <div class="reveal">
+        <span class="section-label">Sustainability &amp; Compliance</span>
+        <div class="section-divider"></div>
+        <h2 class="section-title">Built for the EU AI Act</h2>
+        <p class="section-subtitle">RouteForge AI is designed from the ground up to meet European regulatory standards while helping you run a greener business.</p>
+      </div>
       <div class="sustain-grid">
-        <div class="sustain-card">
+        <div class="sustain-card reveal reveal-delay-1 shine">
           <div class="sustain-icon">&#9878;</div>
           <h3>EU AI Act Ready</h3>
           <p>Every recommendation is traceable, explainable, and compliant with the EU AI Act's risk-based framework. No black boxes. No surprises.</p>
         </div>
-        <div class="sustain-card">
+        <div class="sustain-card reveal reveal-delay-2 shine">
           <div class="sustain-icon">&#127758;</div>
           <h3>Waste Reduction</h3>
           <p>AI-powered demand forecasting helps you order smarter, reduce food waste by up to 30%, and lower your carbon footprint.</p>
         </div>
-        <div class="sustain-card">
+        <div class="sustain-card reveal reveal-delay-3 shine">
           <div class="sustain-icon">&#128179;</div>
           <h3>Sustainable Growth</h3>
           <p>Data-driven decisions mean you invest in what works. Less trial and error. More efficient use of resources and capital.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Trusted by</span>
+        <div class="section-divider"></div>
+        <h2 class="section-title">Recognised across Dublin's innovation ecosystem</h2>
+        <p class="section-subtitle">From TU Dublin to the National College of Ireland &mdash; RouteForge AI is built with academic rigour and real-world impact.</p>
+      </div>
+      <div class="marquee-wrap reveal">
+        <div class="marquee">
+          <div class="marquee-item"><span class="marquee-icon">&#127891;</span> National College of Ireland</div>
+          <div class="marquee-item"><span class="marquee-icon">&#127942;</span> TU Dublin Ambassador Showcase</div>
+          <div class="marquee-item"><span class="marquee-icon">&#9878;</span> EU AI Act Compliant</div>
+          <div class="marquee-item"><span class="marquee-icon">&#128640;</span> Live Prototype Available</div>
+          <div class="marquee-item"><span class="marquee-icon">&#128200;</span> 2,000+ Dublin F&amp;B SMEs</div>
+          <div class="marquee-item"><span class="marquee-icon">&#127891;</span> National College of Ireland</div>
+          <div class="marquee-item"><span class="marquee-icon">&#127942;</span> TU Dublin Ambassador Showcase</div>
+          <div class="marquee-item"><span class="marquee-icon">&#9878;</span> EU AI Act Compliant</div>
+          <div class="marquee-item"><span class="marquee-icon">&#128640;</span> Live Prototype Available</div>
+          <div class="marquee-item"><span class="marquee-icon">&#128200;</span> 2,000+ Dublin F&amp;B SMEs</div>
         </div>
       </div>
     </div>
@@ -202,7 +239,10 @@
     </div>
   </footer>
 
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
   <script>
+    // Hamburger menu
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
     hamburger.addEventListener('click', () => {
@@ -214,6 +254,87 @@
         hamburger.classList.remove('active');
         navLinks.classList.remove('open');
       });
+    });
+
+    // Navbar scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+
+    // Back to top button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) backToTop.classList.add('visible');
+      else backToTop.classList.remove('visible');
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Scroll reveal using IntersectionObserver
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+      revealObserver.observe(el);
+    });
+
+    // Animated counters
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const counters = entry.target.querySelectorAll('.stat-counter');
+          counters.forEach(counter => {
+            const target = parseInt(counter.dataset.target);
+            const duration = 2000;
+            const start = performance.now();
+
+            function update(currentTime) {
+              const elapsed = currentTime - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              counter.textContent = Math.floor(eased * target);
+              if (progress < 1) requestAnimationFrame(update);
+            }
+            requestAnimationFrame(update);
+          });
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const statsSection = document.getElementById('statsSection');
+    if (statsSection) counterObserver.observe(statsSection);
+
+    // Particle generator
+    const particlesContainer = document.getElementById('particles');
+    if (particlesContainer) {
+      for (let i = 0; i < 30; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.width = (Math.random() * 4 + 2) + 'px';
+        particle.style.height = particle.style.width;
+        particle.style.animationDuration = (Math.random() * 20 + 15) + 's';
+        particle.style.animationDelay = Math.random() * 20 + 's';
+        particle.style.opacity = Math.random() * 0.12 + 0.03;
+        particlesContainer.appendChild(particle);
+      }
+    }
+
+    // Parallax effect on hero image
+    const heroImage = document.getElementById('heroImage');
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      if (heroImage && scrollY < window.innerHeight) {
+        heroImage.style.transform = `scale(1.1) translateY(${scrollY * 0.05}px)`;
+      }
     });
   </script>
 </body>

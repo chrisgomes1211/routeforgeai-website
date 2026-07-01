@@ -9,7 +9,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
 </head>
 <body>
-  <nav class="nav">
+  <nav class="nav" id="nav">
     <div class="container">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-icon">R</span>
@@ -29,44 +29,67 @@
     </div>
   </nav>
 
-  <section class="page-header">
+  <section class="page-header animated-gradient">
+    <div class="page-header-bg-img"></div>
     <div class="page-header-glow"></div>
     <div class="container">
-      <span class="section-label">The Team</span>
-      <h1>About RouteForge AI</h1>
-      <p>Four MSc students, one mission: making AI accessible for Dublin's F&B community.</p>
+      <div class="reveal">
+        <span class="section-label">The Team</span>
+        <div class="section-divider"></div>
+        <h1>About RouteForge AI</h1>
+        <p>Four MSc students, one mission: making AI accessible for Dublin's F&B community.</p>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <span class="section-label">Who We Are</span>
-      <h2 class="section-title">Meet the team</h2>
-      <p class="section-subtitle">We are MSc students at the National College of Ireland, combining expertise in AI, data analytics, and business strategy to build RouteForge AI.</p>
+      <div class="reveal">
+        <span class="section-label">Who We Are</span>
+        <div class="section-divider"></div>
+        <h2 class="section-title">Meet the team</h2>
+        <p class="section-subtitle">We are MSc students at the National College of Ireland, combining expertise in AI, data analytics, and business strategy to build RouteForge AI.</p>
+      </div>
       <div class="team-grid">
-        <div class="team-card">
-          <div class="team-avatar">PW</div>
+        <div class="team-card reveal reveal-delay-1 shine">
+          <div class="team-avatar" style="font-size:2.4rem;">PW</div>
           <h3>Puneet Warathe</h3>
           <div class="team-role">AI &amp; Data Lead</div>
           <p>Architecting the AI pipeline and machine learning models that power RouteForge's five-agent system.</p>
+          <div class="team-social">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Email">@</a>
+          </div>
         </div>
-        <div class="team-card">
-          <div class="team-avatar">RM</div>
+        <div class="team-card reveal reveal-delay-2 shine">
+          <div class="team-avatar" style="font-size:2.4rem;">RM</div>
           <h3>Rashmi Manjunath</h3>
           <div class="team-role">UX &amp; Design Lead</div>
           <p>Designing intuitive interfaces and user experiences that make enterprise AI feel accessible to every business owner.</p>
+          <div class="team-social">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Email">@</a>
+          </div>
         </div>
-        <div class="team-card">
-          <div class="team-avatar">CG</div>
+        <div class="team-card reveal reveal-delay-3 shine">
+          <div class="team-avatar" style="font-size:2.4rem;">CG</div>
           <h3>Chris Gomes</h3>
           <div class="team-role">Full-Stack Developer</div>
           <p>Building the platform end-to-end, from frontend interfaces to backend infrastructure and deployment.</p>
+          <div class="team-social">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Email">@</a>
+          </div>
         </div>
-        <div class="team-card">
-          <div class="team-avatar">DM</div>
+        <div class="team-card reveal reveal-delay-4 shine">
+          <div class="team-avatar" style="font-size:2.4rem;">DM</div>
           <h3>Dnyanesh Mali</h3>
           <div class="team-role">Business &amp; Strategy</div>
           <p>Driving market analysis, EU AI Act compliance research, and business development strategy.</p>
+          <div class="team-social">
+            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Email">@</a>
+          </div>
         </div>
       </div>
     </div>
@@ -74,55 +97,63 @@
 
   <section class="section section-alt">
     <div class="container">
-      <span class="section-label">Supervision</span>
-      <h2 class="section-title">Academic supervision</h2>
-      <p class="section-subtitle">Guided by expert faculty at the National College of Ireland.</p>
-      <div style="max-width:500px;margin:0 auto;text-align:center;background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:40px 32px;">
-        <div style="font-size:2.5rem;margin-bottom:12px;">&#127891;</div>
-        <h3 style="font-size:1.3rem;font-weight:600;margin-bottom:6px;">Prof. Sallar Khan</h3>
-        <p style="color:var(--accent);font-weight:500;margin-bottom:8px;">Research Supervisor</p>
-        <p style="color:var(--text-muted);font-size:0.9rem;">National College of Ireland</p>
+      <div class="reveal">
+        <span class="section-label">Supervision</span>
+        <div class="section-divider"></div>
+        <h2 class="section-title">Academic supervision</h2>
+        <p class="section-subtitle">Guided by expert faculty at the National College of Ireland.</p>
+      </div>
+      <div class="reveal reveal-scale" style="max-width:500px;margin:0 auto;">
+        <div style="text-align:center;background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius-lg);padding:40px 32px;transition:all var(--transition);" class="shine">
+          <div style="font-size:3rem;margin-bottom:12px;">&#127891;</div>
+          <h3 style="font-size:1.3rem;font-weight:600;margin-bottom:6px;">Prof. Sallar Khan</h3>
+          <p style="color:var(--accent);font-weight:500;margin-bottom:8px;">Research Supervisor</p>
+          <p style="color:var(--text-muted);font-size:0.9rem;">National College of Ireland</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <span class="section-label">Our Journey</span>
-      <h2 class="section-title">Project milestones</h2>
-      <p class="section-subtitle">From concept to live demo — the RouteForge AI timeline.</p>
+      <div class="reveal">
+        <span class="section-label">Our Journey</span>
+        <div class="section-divider"></div>
+        <h2 class="section-title">Project milestones</h2>
+        <p class="section-subtitle">From concept to live demo — the RouteForge AI timeline.</p>
+      </div>
       <div class="timeline">
-        <div class="timeline-item">
+        <div class="timeline-item reveal reveal-left">
           <div class="timeline-dot"></div>
           <span class="timeline-date">Jan 2026</span>
           <h4>Project Conception</h4>
           <p>Identified the AI adoption gap in Dublin's F&B sector during NCI research seminars.</p>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item reveal reveal-left">
           <div class="timeline-dot"></div>
           <span class="timeline-date">Feb 2026</span>
           <h4>Market Research &amp; Problem Validation</h4>
           <p>Interviewed 12 Dublin F&B owners. Confirmed demand for affordable, compliant AI solutions.</p>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item reveal reveal-left">
           <div class="timeline-dot"></div>
           <span class="timeline-date">Mar 2026</span>
           <h4>Prototype Development</h4>
           <p>Built the first multi-agent pipeline using the Octopus Model orchestration framework.</p>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item reveal reveal-left">
           <div class="timeline-dot"></div>
           <span class="timeline-date">Apr 2026</span>
           <h4>Live Demo Launch</h4>
           <p>Deployed a working prototype: <a href="https://fb-ai-advisor.lovable.app/" target="_blank">fb-ai-advisor.lovable.app</a></p>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item reveal reveal-left">
           <div class="timeline-dot"></div>
           <span class="timeline-date">May 2026</span>
           <h4>TU Dublin Ambassador Showcase</h4>
           <p>Presented RouteForge AI at the TU Dublin Ambassador event, receiving positive industry feedback.</p>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item reveal reveal-left">
           <div class="timeline-dot"></div>
           <span class="timeline-date">Jun 2026</span>
           <h4>Product Website &amp; Portfolio Launch</h4>
@@ -134,21 +165,24 @@
 
   <section class="section section-alt">
     <div class="container">
-      <span class="section-label">Recognition</span>
-      <h2 class="section-title">Ambassador presentation</h2>
-      <p class="section-subtitle">RouteForge AI was selected for presentation at the TU Dublin Ambassador Showcase, highlighting our work in AI-driven sustainability for SMEs.</p>
+      <div class="reveal">
+        <span class="section-label">Recognition</span>
+        <div class="section-divider"></div>
+        <h2 class="section-title">Ambassador presentation</h2>
+        <p class="section-subtitle">RouteForge AI was selected for presentation at the TU Dublin Ambassador Showcase, highlighting our work in AI-driven sustainability for SMEs.</p>
+      </div>
       <div class="social-proof">
-        <div class="social-proof-card">
+        <div class="social-proof-card reveal reveal-delay-1">
           <div class="badge-icon">&#127942;</div>
           <h4>TU Dublin Ambassador</h4>
           <p>Selected to present at the Ambassador event — showcasing student-led AI innovation.</p>
         </div>
-        <div class="social-proof-card">
+        <div class="social-proof-card reveal reveal-delay-2">
           <div class="badge-icon">&#127891;</div>
           <h4>NCI MSc Project</h4>
           <p>Developed as part of the MSc in AI / Data Analytics at the National College of Ireland.</p>
         </div>
-        <div class="social-proof-card">
+        <div class="social-proof-card reveal reveal-delay-3">
           <div class="badge-icon">&#9878;</div>
           <h4>EU AI Act Research</h4>
           <p>Built with compliance-first architecture aligned with the European Union's AI regulatory framework.</p>
@@ -204,6 +238,8 @@
     </div>
   </footer>
 
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
   <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
@@ -216,6 +252,31 @@
         hamburger.classList.remove('active');
         navLinks.classList.remove('open');
       });
+    });
+
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) backToTop.classList.add('visible');
+      else backToTop.classList.remove('visible');
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+      revealObserver.observe(el);
     });
   </script>
 </body>

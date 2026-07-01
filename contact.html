@@ -9,7 +9,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
 </head>
 <body>
-  <nav class="nav">
+  <nav class="nav" id="nav">
     <div class="container">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-icon">R</span>
@@ -29,12 +29,16 @@
     </div>
   </nav>
 
-  <section class="page-header">
+  <section class="page-header animated-gradient">
+    <div class="page-header-bg-img"></div>
     <div class="page-header-glow"></div>
     <div class="container">
-      <span class="section-label">Get In Touch</span>
-      <h1>Contact us</h1>
-      <p>Ready to bring AI to your F&B business? Reach out to the RouteForge AI team.</p>
+      <div class="reveal">
+        <span class="section-label">Get In Touch</span>
+        <div class="section-divider"></div>
+        <h1>Contact us</h1>
+        <p>Ready to bring AI to your F&B business? Reach out to the RouteForge AI team.</p>
+      </div>
     </div>
   </section>
 
@@ -42,10 +46,12 @@
     <div class="container">
       <div class="contact-wrapper">
         <div>
-          <span class="section-label" style="text-align:left;">Send a Message</span>
-          <h2 class="section-title" style="text-align:left;font-size:1.8rem;">Let's talk about your business</h2>
-          <p class="section-subtitle" style="text-align:left;">Tell us about your F&B business and we'll show you how RouteForge AI can help.</p>
-          <form class="contact-form" id="contactForm">
+          <div class="reveal">
+            <span class="section-label" style="text-align:left;">Send a Message</span>
+            <h2 class="section-title" style="text-align:left;font-size:1.8rem;">Let's talk about your business</h2>
+            <p class="section-subtitle" style="text-align:left;">Tell us about your F&B business and we'll show you how RouteForge AI can help.</p>
+          </div>
+          <form class="contact-form reveal" id="contactForm">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" placeholder="Your full name" required>
@@ -71,25 +77,27 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" placeholder="Tell us about your business and what you're looking for..." required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message</button>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+              Send Message <span style="font-size:1.1rem;">&rarr;</span>
+            </button>
           </form>
         </div>
         <div class="contact-info">
-          <div class="contact-info-card">
+          <div class="contact-info-card reveal reveal-delay-1 shine">
             <h3>&#128640; Try the Live Demo</h3>
             <p>Experience RouteForge AI right now. No sign-up needed.</p>
             <a href="https://fb-ai-advisor.lovable.app/" target="_blank" class="contact-link">
               Launch Live Demo &rarr;
             </a>
           </div>
-          <div class="contact-info-card">
+          <div class="contact-info-card reveal reveal-delay-2 shine">
             <h3>&#128279; LinkedIn</h3>
             <p>Connect with us on LinkedIn for updates, research insights, and F&B AI news.</p>
             <a href="#" class="contact-link">
               Follow us on LinkedIn &rarr;
             </a>
           </div>
-          <div class="contact-info-card">
+          <div class="contact-info-card reveal reveal-delay-3 shine">
             <h3>&#127891; Academic Home</h3>
             <p>This project is developed at the National College of Ireland under the supervision of Prof. Sallar Khan.</p>
             <a href="https://www.ncirl.ie/" target="_blank" class="contact-link">
@@ -103,21 +111,24 @@
 
   <section class="section section-alt">
     <div class="container">
-      <span class="section-label">Recognition</span>
-      <h2 class="section-title">Showcased at TU Dublin</h2>
-      <p class="section-subtitle">RouteForge AI was selected for the TU Dublin Ambassador Presentation, demonstrating the impact of AI-driven innovation in Dublin's food sector.</p>
+      <div class="reveal">
+        <span class="section-label">Recognition</span>
+        <div class="section-divider"></div>
+        <h2 class="section-title">Showcased at TU Dublin</h2>
+        <p class="section-subtitle">RouteForge AI was selected for the TU Dublin Ambassador Presentation, demonstrating the impact of AI-driven innovation in Dublin's food sector.</p>
+      </div>
       <div class="social-proof">
-        <div class="social-proof-card">
+        <div class="social-proof-card reveal reveal-delay-1">
           <div class="badge-icon">&#127942;</div>
           <h4>Ambassador Selection</h4>
           <p>Chosen to represent student AI innovation at the TU Dublin Ambassador showcase event.</p>
         </div>
-        <div class="social-proof-card">
+        <div class="social-proof-card reveal reveal-delay-2">
           <div class="badge-icon">&#128640;</div>
           <h4>Live Prototype</h4>
           <p>Fully functional demo available at <a href="https://fb-ai-advisor.lovable.app/" target="_blank">fb-ai-advisor.lovable.app</a></p>
         </div>
-        <div class="social-proof-card">
+        <div class="social-proof-card reveal reveal-delay-3">
           <div class="badge-icon">&#128218;</div>
           <h4>NCI Research Project</h4>
           <p>Part of the MSc programme at the National College of Ireland, supervised by Prof. Sallar Khan.</p>
@@ -173,6 +184,8 @@
     </div>
   </footer>
 
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
   <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
@@ -187,16 +200,42 @@
       });
     });
 
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) backToTop.classList.add('visible');
+      else backToTop.classList.remove('visible');
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+      revealObserver.observe(el);
+    });
+
     const form = document.getElementById('contactForm');
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
-      const originalText = btn.textContent;
       btn.textContent = 'Message sent! We\'ll be in touch.';
       btn.style.background = '#22c55e';
+      btn.disabled = true;
       setTimeout(() => {
-        btn.textContent = originalText;
+        btn.innerHTML = 'Send Message <span style="font-size:1.1rem;">&rarr;</span>';
         btn.style.background = '';
+        btn.disabled = false;
         form.reset();
       }, 3000);
     });

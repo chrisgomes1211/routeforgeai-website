@@ -9,7 +9,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
 </head>
 <body>
-  <nav class="nav">
+  <nav class="nav" id="nav">
     <div class="container">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-icon">R</span>
@@ -29,54 +29,58 @@
     </div>
   </nav>
 
-  <section class="page-header">
+  <section class="page-header animated-gradient">
+    <div class="page-header-bg-img"></div>
     <div class="page-header-glow"></div>
     <div class="container">
-      <span class="section-label">Real Problems, Real Solutions</span>
-      <h1>F&amp;B challenges RouteForge solves</h1>
-      <p>Six critical pain points Dublin food businesses face — and how our AI agents address each one.</p>
+      <div class="reveal">
+        <span class="section-label">Real Problems, Real Solutions</span>
+        <div class="section-divider"></div>
+        <h1>F&amp;B challenges RouteForge solves</h1>
+        <p>Six critical pain points Dublin food businesses face — and how our AI agents address each one.</p>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
       <div class="usecase-grid">
-        <div class="usecase-card">
+        <div class="usecase-card reveal reveal-delay-1 shine">
           <div class="usecase-icon">&#127858;</div>
           <div class="problem-label">Challenge</div>
           <h3>Food Waste</h3>
           <p>Irish food businesses lose thousands of euros annually to spoilage and over-ordering. Without demand forecasting, waste is accepted as a cost of doing business.</p>
           <div class="solution-label">AI predicts demand within 8% accuracy, slashing waste by up to 30%</div>
         </div>
-        <div class="usecase-card">
+        <div class="usecase-card reveal reveal-delay-2 shine">
           <div class="usecase-icon">&#128188;</div>
           <div class="problem-label">Challenge</div>
           <h3>Staffing &amp; Scheduling</h3>
           <p>Labour is the largest cost after food. Understaffing loses customers; overstaffing burns margin. Most cafes and restaurants guess their schedules.</p>
           <div class="solution-label">AI analyses foot traffic patterns to optimise shift schedules in minutes</div>
         </div>
-        <div class="usecase-card">
+        <div class="usecase-card reveal reveal-delay-3 shine">
           <div class="usecase-icon">&#129505;</div>
           <div class="problem-label">Challenge</div>
           <h3>Customer Loyalty</h3>
           <p>Punch cards and generic email blasts don't work anymore. Dublin diners expect personalised experiences but SMEs lack the data infrastructure to deliver them.</p>
           <div class="solution-label">AI segments customers and automates personalised retention campaigns</div>
         </div>
-        <div class="usecase-card">
+        <div class="usecase-card reveal reveal-delay-1 shine">
           <div class="usecase-icon">&#128176;</div>
           <div class="problem-label">Challenge</div>
           <h3>Dynamic Pricing</h3>
           <p>Competitors change prices daily. Without real-time market intelligence, businesses leave money on the table or price themselves out of the market.</p>
           <div class="solution-label">AI monitors competitors and recommends optimal pricing by menu item</div>
         </div>
-        <div class="usecase-card">
+        <div class="usecase-card reveal reveal-delay-2 shine">
           <div class="usecase-icon">&#128241;</div>
           <div class="problem-label">Challenge</div>
           <h3>Online Orders</h3>
           <p>Delivery platforms take 30% commission. SMEs need their own ordering channels but lack the technical expertise and budget to build them.</p>
           <div class="solution-label">AI-powered direct ordering system with intelligent upselling built in</div>
         </div>
-        <div class="usecase-card">
+        <div class="usecase-card reveal reveal-delay-3 shine">
           <div class="usecase-icon">&#11088;</div>
           <div class="problem-label">Challenge</div>
           <h3>Reviews &amp; Reputation</h3>
@@ -89,13 +93,16 @@
 
   <section class="section section-alt">
     <div class="container">
-      <span class="section-label">See It In Action</span>
-      <h2 class="section-title">Ready to try RouteForge AI?</h2>
-      <p class="section-subtitle">Experience the full platform with our live demo. See how five AI agents can transform your F&B business.</p>
-      <div style="text-align:center;">
-        <a href="https://fb-ai-advisor.lovable.app/" target="_blank" class="btn btn-primary" style="font-size:1.1rem;padding:18px 40px;">
-          Launch Live Demo &rarr;
-        </a>
+      <div class="reveal">
+        <span class="section-label">See It In Action</span>
+        <div class="section-divider"></div>
+        <h2 class="section-title">Ready to try RouteForge AI?</h2>
+        <p class="section-subtitle">Experience the full platform with our live demo. See how five AI agents can transform your F&B business.</p>
+        <div style="text-align:center;">
+          <a href="https://fb-ai-advisor.lovable.app/" target="_blank" class="btn btn-primary" style="font-size:1.1rem;padding:18px 40px;">
+            Launch Live Demo &rarr;
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -147,6 +154,8 @@
     </div>
   </footer>
 
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
   <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
@@ -159,6 +168,31 @@
         hamburger.classList.remove('active');
         navLinks.classList.remove('open');
       });
+    });
+
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) backToTop.classList.add('visible');
+      else backToTop.classList.remove('visible');
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+      revealObserver.observe(el);
     });
   </script>
 </body>
