@@ -27,20 +27,6 @@
       "url": "https://chrisgomes1211.github.io/routeforgeai-website/"
     }
   }
-  
-    const scrollProgress = document.getElementById('scrollProgress');
-    window.addEventListener('scroll', () => {
-      const h = document.documentElement.scrollHeight - window.innerHeight;
-      scrollProgress.style.width = h > 0 ? (window.scrollY / h * 100) + '%' : '0%';
-    });
-    const themeToggle = document.getElementById('themeToggle');
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') document.documentElement.setAttribute('data-theme', 'light');
-    themeToggle.addEventListener('click', () => {
-      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-      document.documentElement.setAttribute('data-theme', isLight ? '' : 'light');
-      localStorage.setItem('theme', isLight ? '' : 'light');
-    });
 
   </script>
   <link rel="stylesheet" href="style.css">
@@ -50,7 +36,8 @@
   <nav class="nav" id="nav">
     <div class="container">
       <a href="index.html" class="nav-logo">
-        <img src="assets/routeforge-logo.png" alt="RouteForge AI" class="nav-logo-img">
+        <span class="nav-logo-icon">R</span>
+        RouteForge AI
       </a>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -62,7 +49,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
         <li class="nav-cta"><a href="https://fb-ai-advisor.lovable.app/" class="btn btn-primary btn-sm" target="_blank">Live Demo</a></li>
-        <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span class="dark-icon">&#127769;</span><span class="light-icon">&#9728;&#65039;</span></button></li>
+        
       </ul>
     </div>
   </nav>
@@ -180,7 +167,8 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo">
-            <img src="assets/routeforge-logo.png" alt="RouteForge AI" class="nav-logo-img">
+            <span class="nav-logo-icon">R</span>
+            RouteForge AI
           </a>
           <p>AI-powered advisory for Food &amp; Beverage SMEs in Dublin. Built by students at the National College of Ireland.</p>
         </div>
