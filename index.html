@@ -5,10 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RouteForge AI — AI-Powered F&B Advisory for Dublin SMEs</title>
   <meta name="description" content="RouteForge AI is a 5-agent AI advisory platform helping F&B SMEs in Dublin navigate the EU AI Act, reduce waste, and unlock growth.">
+  <meta property="og:title" content="RouteForge AI — AI-Powered F&B Advisory">
+  <meta property="og:description" content="Five specialist AI agents helping Dublin F&B SMEs navigate the EU AI Act, reduce waste, and unlock growth.">
+  <meta property="og:url" content="https://chrisgomes1211.github.io/routeforgeai-website/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://chrisgomes1211.github.io/routeforgeai-website/assets/routeforge-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RouteForge AI — AI-Powered F&B Advisory">
+  <meta name="twitter:description" content="Five specialist AI agents helping Dublin F&B SMEs navigate the EU AI Act, reduce waste, and unlock growth.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "RouteForge AI",
+    "applicationCategory": "BusinessApplication",
+    "description": "Five-agent AI advisory platform for F&B SMEs in Dublin. EU AI Act compliant.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+    "author": {
+      "@type": "Organization",
+      "name": "RouteForge AI",
+      "url": "https://chrisgomes1211.github.io/routeforgeai-website/"
+    }
+  }
+  </script>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/routeforge-logo-sm.png">
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
   <div class="cursor-glow" id="cursorGlow"></div>
 
   <nav class="nav" id="nav">
@@ -26,6 +50,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li class="nav-cta"><a href="https://fb-ai-advisor.lovable.app/" class="btn btn-primary btn-sm" target="_blank">Live Demo</a></li>
+        <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span class="dark-icon">&#127769;</span><span class="light-icon">&#9728;&#65039;</span></button></li>
       </ul>
     </div>
   </nav>
@@ -315,8 +340,8 @@
           <h4>Resources</h4>
           <ul class="footer-links">
             <li><a href="https://fb-ai-advisor.lovable.app/" target="_blank">Live Demo</a></li>
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">API Reference</a></li>
+            <li><a href="https://github.com/chrisgomes1211/routeforgeai-website" target="_blank">GitHub</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
         <div>
@@ -324,7 +349,7 @@
           <ul class="footer-links">
             <li><a href="contact.html">Get in Touch</a></li>
             <li><a href="https://www.ncirl.ie/" target="_blank">NCI</a></li>
-            <li><a href="#">LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/school/national-college-of-ireland/" target="_blank">LinkedIn</a></li>
           </ul>
         </div>
       </div>
@@ -503,6 +528,23 @@
       if (heroImage && sy < window.innerHeight) {
         heroImage.style.transform = `scale(1.1) translateY(${sy * 0.05}px)`;
       }
+    });
+
+    // Scroll progress bar
+    const scrollProgress = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      scrollProgress.style.width = h > 0 ? (window.scrollY / h * 100) + '%' : '0%';
+    });
+
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    themeToggle.addEventListener('click', () => {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      document.documentElement.setAttribute('data-theme', isLight ? '' : 'light');
+      localStorage.setItem('theme', isLight ? '' : 'light');
     });
   </script>
 </body>

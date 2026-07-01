@@ -4,7 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — RouteForge AI</title>
-  <meta name="description" content="Meet the RouteForge AI team: four MSc students at NCI Dublin, supervised by Prof. Sallar Khan.">
+  <meta name="description" content="Meet the RouteForge AI team: four MSc students at NCI Dublin building AI for F&B SMEs.">
+  <meta property="og:title" content="About — RouteForge AI">
+  <meta property="og:description" content="Meet the RouteForge AI team: four MSc students at NCI Dublin building AI for F&B SMEs.">
+  <meta property="og:url" content="https://chrisgomes1211.github.io/routeforgeai-website/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://chrisgomes1211.github.io/routeforgeai-website/assets/routeforge-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About — RouteForge AI">
+  <meta name="twitter:description" content="Meet the RouteForge AI team: four MSc students at NCI Dublin building AI for F&B SMEs.">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "RouteForge AI",
+    "applicationCategory": "BusinessApplication",
+    "description": "Five-agent AI advisory platform for F&B SMEs in Dublin. EU AI Act compliant.",
+    "author": {
+      "@type": "Organization",
+      "name": "RouteForge AI",
+      "url": "https://chrisgomes1211.github.io/routeforgeai-website/"
+    }
+  }
+  
+    const scrollProgress = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const h = document.documentElement.scrollHeight - window.innerHeight;
+      scrollProgress.style.width = h > 0 ? (window.scrollY / h * 100) + '%' : '0%';
+    });
+    const themeToggle = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    themeToggle.addEventListener('click', () => {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      document.documentElement.setAttribute('data-theme', isLight ? '' : 'light');
+      localStorage.setItem('theme', isLight ? '' : 'light');
+    });
+
+  </script>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/routeforge-logo-sm.png">
 </head>
@@ -24,6 +62,7 @@
         <li><a href="about.html" class="active">About</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li class="nav-cta"><a href="https://fb-ai-advisor.lovable.app/" class="btn btn-primary btn-sm" target="_blank">Live Demo</a></li>
+        <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span class="dark-icon">&#127769;</span><span class="light-icon">&#9728;&#65039;</span></button></li>
       </ul>
     </div>
   </nav>
@@ -56,8 +95,8 @@
           <div class="team-role">AI &amp; Data Lead</div>
           <p>Architecting the AI pipeline and machine learning models that power RouteForge's five-agent system.</p>
           <div class="team-social">
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="Email">@</a>
+            <a href="https://www.linkedin.com/school/national-college-of-ireland/" target="_blank" aria-label="LinkedIn">in</a>
+            <a href="mailto:routeforgeai@ncirl.ie" aria-label="Email">@</a>
           </div>
         </div>
         <div class="team-card reveal reveal-delay-2 shine">
@@ -66,8 +105,8 @@
           <div class="team-role">UX &amp; Design Lead</div>
           <p>Designing intuitive interfaces and user experiences that make enterprise AI feel accessible to every business owner.</p>
           <div class="team-social">
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="Email">@</a>
+            <a href="https://www.linkedin.com/school/national-college-of-ireland/" target="_blank" aria-label="LinkedIn">in</a>
+            <a href="mailto:routeforgeai@ncirl.ie" aria-label="Email">@</a>
           </div>
         </div>
         <div class="team-card reveal reveal-delay-3 shine">
@@ -76,8 +115,8 @@
           <div class="team-role">Full-Stack Developer</div>
           <p>Building the platform end-to-end, from frontend interfaces to backend infrastructure and deployment.</p>
           <div class="team-social">
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="Email">@</a>
+            <a href="https://www.linkedin.com/school/national-college-of-ireland/" target="_blank" aria-label="LinkedIn">in</a>
+            <a href="mailto:routeforgeai@ncirl.ie" aria-label="Email">@</a>
           </div>
         </div>
         <div class="team-card reveal reveal-delay-4 shine">
@@ -86,8 +125,8 @@
           <div class="team-role">Business &amp; Strategy</div>
           <p>Driving market analysis, EU AI Act compliance research, and business development strategy.</p>
           <div class="team-social">
-            <a href="#" aria-label="LinkedIn">in</a>
-            <a href="#" aria-label="Email">@</a>
+            <a href="https://www.linkedin.com/school/national-college-of-ireland/" target="_blank" aria-label="LinkedIn">in</a>
+            <a href="mailto:routeforgeai@ncirl.ie" aria-label="Email">@</a>
           </div>
         </div>
       </div>
@@ -213,8 +252,8 @@
           <h4>Resources</h4>
           <ul class="footer-links">
             <li><a href="https://fb-ai-advisor.lovable.app/" target="_blank">Live Demo</a></li>
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">API Reference</a></li>
+            <li><a href="https://github.com/chrisgomes1211/routeforgeai-website" target="_blank">GitHub</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
         <div>
@@ -222,7 +261,7 @@
           <ul class="footer-links">
             <li><a href="contact.html">Get in Touch</a></li>
             <li><a href="https://www.ncirl.ie/" target="_blank">NCI</a></li>
-            <li><a href="#">LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/school/national-college-of-ireland/" target="_blank">LinkedIn</a></li>
           </ul>
         </div>
       </div>
