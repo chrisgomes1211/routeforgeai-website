@@ -371,15 +371,15 @@ img { max-width: 100%; display: block; }
 .dashboard-stat { font-size: 1.6rem; font-weight: 800; color: var(--accent); }
 .dashboard-stat-label { font-size: 0.8rem; color: var(--text-muted); }
 .dashboard-bar { height: 8px; background: rgba(255,255,255,0.06); border-radius: 4px; margin-top: 10px; overflow: hidden; }
-.dashboard-bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--accent), #4adba7); }
+.dashboard-bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--accent), #ff8800); }
 .dashboard-pulse { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
 .dashboard-pulse:last-child { border-bottom: none; }
 .dashboard-pulse-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; animation: pulseDot 1.5s ease infinite; }
-.dashboard-pulse-dot.green { background: #22c55e; }
-.dashboard-pulse-dot.orange { background: #f97316; }
-.dashboard-pulse-dot.blue { background: #3b82f6; }
-.dashboard-pulse-dot.purple { background: #a855f7; }
-.dashboard-pulse-dot.yellow { background: #eab308; }
+.dashboard-pulse-dot.green { background: #ffb000; }
+.dashboard-pulse-dot.orange { background: #ff8800; }
+.dashboard-pulse-dot.blue { background: #ffcc44; }
+.dashboard-pulse-dot.purple { background: #ff9900; }
+.dashboard-pulse-dot.yellow { background: #e8a000; }
 @keyframes pulseDot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
 /* Agent Avatar SVG */
