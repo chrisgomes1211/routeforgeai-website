@@ -253,9 +253,12 @@ a:hover { color: var(--accent-hover); }
 .img-box-caption { padding: 16px 20px; font-size: 0.88rem; color: var(--text-muted); background: var(--surface); border-top: 1px solid var(--border-light); }
 
 /* Page Header (interior pages) */
-.page-header { padding: 140px 0 60px; text-align: center; background: var(--bg); position: relative; }
-.page-header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 16px; }
-.page-header p { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; }
+.page-header { padding: 140px 0 60px; text-align: center; background: var(--bg); position: relative; overflow: hidden; }
+.page-header-bg { position: absolute; inset: 0; z-index: 0; background: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&q=80&auto=format&fit=crop') center center / cover no-repeat; pointer-events: none; }
+.page-header-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, var(--bg) 20%, rgba(250,248,246,0.8) 50%, var(--bg) 85%); }
+.page-header > .container { position: relative; z-index: 1; }
+.page-header h1 { font-size: 3rem; font-weight: 800; margin-bottom: 16px; position: relative; z-index: 1; }
+.page-header p { font-size: 1.1rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; position: relative; z-index: 1; }
 
 /* Contact Form */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
@@ -337,6 +340,7 @@ a:hover { color: var(--accent-hover); }
   .testimonials-grid { grid-template-columns: 1fr; }
   .dash-grid { grid-template-columns: repeat(2, 1fr); }
   .page-header { padding: 120px 0 40px; }
+  .page-header-bg { display: none; }
   .page-header h1 { font-size: 2.2rem; }
   .agent-flip-card { height: 240px; }
   .agent-step { left: -42px; width: 24px; height: 24px; font-size: 0.65rem; }
