@@ -1,695 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RouteForge AI — AI-Powered F&B Advisory for Dublin SMEs</title>
-  <meta name="description" content="RouteForge AI is a 5-agent AI advisory platform helping F&B SMEs in Dublin navigate the EU AI Act, reduce waste, and unlock growth.">
-  <meta property="og:title" content="RouteForge AI — AI-Powered F&B Advisory">
-  <meta property="og:description" content="Five specialist AI agents helping Dublin F&B SMEs navigate the EU AI Act, reduce waste, and unlock growth.">
-  <meta property="og:url" content="https://chrisgomes1211.github.io/routeforgeai-website/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://chrisgomes1211.github.io/routeforgeai-website/assets/routeforge-logo.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="RouteForge AI — AI-Powered F&B Advisory">
-  <meta name="twitter:description" content="Five specialist AI agents helping Dublin F&B SMEs navigate the EU AI Act, reduce waste, and unlock growth.">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "RouteForge AI",
-    "applicationCategory": "BusinessApplication",
-    "description": "Five-agent AI advisory platform for F&B SMEs in Dublin. EU AI Act compliant.",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
-    "author": {
-      "@type": "Organization",
-      "name": "RouteForge AI",
-      "url": "https://chrisgomes1211.github.io/routeforgeai-website/"
-    }
-  }
-  </script>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/routeforge-logo-sm.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RouteForge AI — AI Built for Your F&B Business</title>
+<meta name="description" content="AI-powered platform helping cafes, restaurants, and F&B businesses forecast demand, optimise staffing, and reduce waste.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://chrisgomes1211.github.io/routeforgeai-website/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"RouteForge AI","description":"AI-powered platform for F&B businesses to forecast demand, optimise staffing, and reduce waste.","url":"https://chrisgomes1211.github.io/routeforgeai-website/"}</script>
 </head>
 <body>
-  <div class="crt-overlay"></div>
-  <div class="cursor-glow" id="cursorGlow"></div>
 
-  <nav class="nav" id="nav">
-    <div class="container">
-      <a href="index.html" class="nav-logo">
-        <span class="nav-logo-icon">R</span>
-        RouteForge AI
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="use-cases.html">Use Cases</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li class="nav-cta"><a href="https://fb-ai-advisor.lovable.app/" class="btn btn-primary btn-sm" target="_blank">Live Demo</a></li>
-        
-      </ul>
+<nav class="nav" id="nav">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><span class="logo-text" style="color:var(--accent);font-weight:800;">R</span><span style="color:var(--text);font-weight:300;">oute</span><span style="color:var(--accent);font-weight:700;">Forge</span> <span style="color:var(--text-muted);font-weight:300;font-size:0.75rem;">AI</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="use-cases.html">Use Cases</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </nav>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-image-overlay"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-glow-2"></div>
-    <div class="particles" id="particles"></div>
-    <div class="container">
-      <div class="hero-badge animate-in">
-        <span>&#10003; EU AI Act Compliant &mdash; Built for Dublin F&amp;B</span>
-      </div>
-      <h1 class="animate-in animate-in-delay-1">
-        <div class="typewriter-wrap" id="typewriter">
-          <span id="typewriterText"></span><span class="typewriter-cursor" id="typewriterCursor">|</span>
+<section class="hero">
+  <div class="hero-grid" data-speed="0.05"></div>
+  <div class="hero-shapes">
+    <div class="hero-shape hero-shape-1" data-speed="0.08"></div>
+    <div class="hero-shape hero-shape-2" data-speed="0.1"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text" data-speed="0.3">
+        <div class="hero-badge">Now in Beta</div>
+        <h1>AI built for your<br><span class="gradient-text">F&B Business</span></h1>
+        <p>Connect your sales, inventory, and staffing data. Get AI-powered demand forecasts, reduce waste, and optimise labour — all from one intelligent dashboard.</p>
+        <div class="hero-actions">
+          <a href="#pricing" class="btn btn-primary">Start Free Trial</a>
+          <a href="how-it-works.html" class="btn btn-outline">See How It Works &rarr;</a>
         </div>
-      </h1>
-      <p class="animate-in animate-in-delay-2">
-        RouteForge AI brings enterprise-grade artificial intelligence to Food &amp; Beverage SMEs in Dublin. Five specialist agents. One platform. Zero complexity.
-      </p>
-      <div class="hero-actions animate-in animate-in-delay-3">
-        <a href="how-it-works.html" class="btn btn-primary magnetic-wrap">Explore the Platform</a>
-        <a href="https://fb-ai-advisor.lovable.app/" target="_blank" class="hero-demo-link">
-          Try Live Demo &rarr;
-        </a>
       </div>
-      <div class="hero-mockup animate-in animate-in-delay-4">
-        <div class="browser-mockup" style="margin:0;box-shadow:0 20px 80px rgba(0,0,0,0.5);">
+      <div class="dashboard-box" data-speed="0.2">
+        <div class="browser-frame">
           <div class="browser-bar">
-            <div class="browser-dot red"></div>
-            <div class="browser-dot yellow"></div>
-            <div class="browser-dot green"></div>
+            <div class="browser-dots"><span class="browser-dot red"></span><span class="browser-dot yellow"></span><span class="browser-dot green"></span></div>
             <div class="browser-url">app.routeforge.ai/dashboard</div>
           </div>
-          <div class="dashboard-preview">
-            <div class="dashboard-row">
-              <div class="dashboard-card">
-                <h4>Business Health Score</h4>
-                <div class="dashboard-stat">86</div>
-                <div class="dashboard-stat-label">/100 &mdash; Up 12% this quarter</div>
-                <div class="dashboard-bar"><div class="dashboard-bar-fill" style="width:86%"></div></div>
-              </div>
-              <div class="dashboard-card">
-                <h4>AI Agents Status</h4>
-                <div class="dashboard-pulse"><span class="dashboard-pulse-dot green"></span> Researcher &mdash; Active</div>
-                <div class="dashboard-pulse"><span class="dashboard-pulse-dot green"></span> Designer &mdash; Active</div>
-                <div class="dashboard-pulse"><span class="dashboard-pulse-dot blue"></span> Maker &mdash; Processing</div>
-                <div class="dashboard-pulse"><span class="dashboard-pulse-dot orange"></span> Marketer &mdash; Idle</div>
-                <div class="dashboard-pulse"><span class="dashboard-pulse-dot green"></span> Manager &mdash; Active</div>
-              </div>
+          <div class="dash-grid">
+            <div class="dash-card">
+              <div class="dash-label">Health Score</div>
+              <div class="dash-value accent">86</div>
+              <div class="dash-bar"><div class="dash-bar-fill" style="width:86%"></div></div>
+            </div>
+            <div class="dash-card">
+              <div class="dash-label">Staffing</div>
+              <div class="dash-value green">-12%</div>
+              <div class="dash-sub">over-optimised</div>
+            </div>
+            <div class="dash-card">
+              <div class="dash-label">Waste</div>
+              <div class="dash-value green">-22%</div>
+              <div class="dash-sub">vs last month</div>
+            </div>
+            <div class="dash-card">
+              <div class="dash-label">Revenue</div>
+              <div class="dash-value accent">+8.4%</div>
+              <div class="dash-sub">projected growth</div>
+            </div>
+            <div class="dash-card">
+              <div class="dash-label">Forecast</div>
+              <div class="dash-value">94%</div>
+              <div class="dash-sub">accuracy rate</div>
+            </div>
+            <div class="dash-card">
+              <div class="dash-label">CO2 Saved</div>
+              <div class="dash-value green">2.4t</div>
+              <div class="dash-sub">this quarter</div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="stats-strip reveal" id="statsSection">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item">
-          <div class="stat-number"><span class="stat-counter" data-target="2000">0</span><span class="stat-suffix">+</span></div>
-          <div class="stat-label">Dublin F&amp;B SMEs</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">&lt;<span class="stat-counter" data-target="20">0</span><span class="stat-suffix">%</span></div>
-          <div class="stat-label">AI Adoption Rate</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number"><span class="stat-counter" data-target="5">0</span></div>
-          <div class="stat-label">Specialist AI Agents</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number"><span class="stat-counter" data-target="3">0</span></div>
-          <div class="stat-label">Phases to Compliance</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-wave">
-    <div class="container">
-      <div class="reveal">
-        <span class="section-label">The Problem</span>
-        <div class="section-divider"></div>
-        <h2 class="section-title">Why Dublin's F&amp;B SMEs are stuck</h2>
-        <p class="section-subtitle">Despite living in a tech capital, most food and beverage businesses struggle to adopt AI meaningfully.</p>
-      </div>
-      <div class="problem-grid" id="tiltGrid">
-        <div class="problem-card glass reveal reveal-delay-1 tilt-card" data-tilt>
-          <div class="problem-icon">&#9888;</div>
-          <h3>EU AI Act Uncertainty</h3>
-          <p>New regulations create confusion. Most SMEs don't know if their AI usage is compliant or what they need to change.</p>
-        </div>
-        <div class="problem-card glass reveal reveal-delay-2 tilt-card" data-tilt>
-          <div class="problem-icon">&#128200;</div>
-          <h3>No Data Strategy</h3>
-          <p>Customer data is siloed across spreadsheets, loyalty cards, and delivery apps. No unified view means no actionable insights.</p>
-        </div>
-        <div class="problem-card glass reveal reveal-delay-3 tilt-card" data-tilt>
-          <div class="problem-icon">&#128176;</div>
-          <h3>Cost of Entry</h3>
-          <p>Enterprise AI solutions are priced for multinationals. Independent restaurants and cafes can't justify the investment.</p>
-        </div>
-        <div class="problem-card glass reveal reveal-delay-4 tilt-card" data-tilt>
-          <div class="problem-icon">&#128170;</div>
-          <h3>Staff &amp; Skills Gap</h3>
-          <p>Hiring data scientists or AI specialists is out of reach. Existing teams are already stretched running daily operations.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt section-wave">
-    <div class="container">
-      <div class="reveal">
-        <span class="section-label">3 Steps to Start</span>
-        <div class="section-divider"></div>
-        <h2 class="section-title">From audit to AI-powered growth</h2>
-        <p class="section-subtitle">Get started in three simple phases with your dedicated AI agent team.</p>
-      </div>
-      <div class="steps-grid">
-        <div class="step-card glass reveal reveal-delay-1">
-          <div class="step-card-icon"><img src="assets/agent-researcher.svg" alt="Assess"></div>
-          <h3>Assess &amp; Audit</h3>
-          <p>Our Researcher Agent analyses your current operations, data maturity, and compliance posture. You get a clear picture of where you stand.</p>
-        </div>
-        <div class="step-card glass reveal reveal-delay-2">
-          <div class="step-card-icon"><img src="assets/agent-maker.svg" alt="Build"></div>
-          <h3>Strategise &amp; Build</h3>
-          <p>The Designer and Maker agents collaborate to create a tailored AI roadmap. From customer analytics to waste reduction systems &mdash; built for your business.</p>
-        </div>
-        <div class="step-card glass reveal reveal-delay-3">
-          <div class="step-card-icon"><img src="assets/agent-marketer.svg" alt="Launch"></div>
-          <h3>Deploy &amp; Grow</h3>
-          <p>The Marketer Agent helps you launch AI-powered campaigns and customer experiences. Continuous evaluation ensures you stay compliant and competitive.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-wave">
-    <div class="container">
-      <div class="reveal">
-        <span class="section-label">Platform Features</span>
-        <div class="section-divider"></div>
-        <h2 class="section-title">Everything you need to grow</h2>
-        <p class="section-subtitle">Five specialist AI agents working together to transform your F&B business.</p>
-      </div>
-      <div class="sustain-grid features-grid">
-        <div class="sustain-card glass reveal reveal-delay-1" style="text-align:center;">
-          <img src="assets/agent-researcher.svg" alt="Researcher" style="width:56px;height:56px;margin:0 auto 12px;display:block;">
-          <h3 style="font-size:0.95rem;">Researcher</h3>
-          <p style="font-size:0.8rem;">Market intelligence &amp; data auditing</p>
-        </div>
-        <div class="sustain-card glass reveal reveal-delay-2" style="text-align:center;">
-          <img src="assets/agent-designer.svg" alt="Designer" style="width:56px;height:56px;margin:0 auto 12px;display:block;">
-          <h3 style="font-size:0.95rem;">Designer</h3>
-          <p style="font-size:0.8rem;">Solution architecture &amp; UX</p>
-        </div>
-        <div class="sustain-card glass reveal reveal-delay-3" style="text-align:center;">
-          <img src="assets/agent-maker.svg" alt="Maker" style="width:56px;height:56px;margin:0 auto 12px;display:block;">
-          <h3 style="font-size:0.95rem;">Maker</h3>
-          <p style="font-size:0.8rem;">Build &amp; deployment</p>
-        </div>
-        <div class="sustain-card glass reveal reveal-delay-4" style="text-align:center;">
-          <img src="assets/agent-marketer.svg" alt="Marketer" style="width:56px;height:56px;margin:0 auto 12px;display:block;">
-          <h3 style="font-size:0.95rem;">Marketer</h3>
-          <p style="font-size:0.8rem;">Growth &amp; distribution</p>
-        </div>
-        <div class="sustain-card glass reveal reveal-delay-5" style="text-align:center;">
-          <img src="assets/agent-manager.svg" alt="Manager" style="width:56px;height:56px;margin:0 auto 12px;display:block;">
-          <h3 style="font-size:0.95rem;">Manager</h3>
-          <p style="font-size:0.8rem;">Orchestration &amp; quality</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt section-wave">
-    <div class="container">
-      <div class="reveal">
-        <span class="section-label">Enterprise Security</span>
-        <div class="section-divider"></div>
-        <h2 class="section-title">Multi-layer trust &amp; compliance</h2>
-        <p class="section-subtitle">Built from the ground up with security, privacy, and regulatory compliance at every layer.</p>
-      </div>
-      <div class="security-grid">
-        <div class="security-card glass reveal reveal-delay-1 shine">
-          <div class="security-icon">&#128274;</div>
-          <h3>Data Encryption</h3>
-          <p>All business data encrypted at rest and in transit. GDPR-compliant storage with granular access controls.</p>
-        </div>
-        <div class="security-card glass reveal reveal-delay-2 shine">
-          <div class="security-icon">&#9878;</div>
-          <h3>EU AI Act Compliant</h3>
-          <p>Built for the EU AI Act risk-based framework. Every recommendation is traceable, explainable, and auditable.</p>
-        </div>
-        <div class="security-card glass reveal reveal-delay-3 shine">
-          <div class="security-icon">&#128200;</div>
-          <h3>Real-time Monitoring</h3>
-          <p>Continuous monitoring of agent decisions and data flows. Full audit trail for every action and recommendation.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-wave">
-    <div class="container">
-      <div class="reveal">
-        <span class="section-label">Sustainability &amp; Compliance</span>
-        <div class="section-divider"></div>
-        <h2 class="section-title">Built for the EU AI Act</h2>
-        <p class="section-subtitle">RouteForge AI is designed from the ground up to meet European regulatory standards while helping you run a greener business.</p>
-      </div>
-      <div class="sustain-grid">
-        <div class="sustain-card glass reveal reveal-delay-1">
-          <div class="sustain-icon">&#9878;</div>
-          <h3>EU AI Act Ready</h3>
-          <p>Every recommendation is traceable, explainable, and compliant with the EU AI Act's risk-based framework. No black boxes. No surprises.</p>
-        </div>
-        <div class="sustain-card glass reveal reveal-delay-2">
-          <div class="sustain-icon">&#127758;</div>
-          <h3>Waste Reduction</h3>
-          <p>AI-powered demand forecasting helps you order smarter, reduce food waste by up to 30%, and lower your carbon footprint.</p>
-        </div>
-        <div class="sustain-card glass reveal reveal-delay-3">
-          <div class="sustain-icon">&#128179;</div>
-          <h3>Sustainable Growth</h3>
-          <p>Data-driven decisions mean you invest in what works. Less trial and error. More efficient use of resources and capital.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt section-wave">
-    <div class="container">
-      <div class="reveal">
-        <span class="section-label">What F&amp;B Owners Say</span>
-        <div class="section-divider"></div>
-        <h2 class="section-title">Trusted by Dublin's food community</h2>
-        <p class="section-subtitle">Real feedback from food and beverage businesses exploring AI with RouteForge.</p>
-      </div>
-      <div class="testimonial-carousel reveal" id="testimonialCarousel">
-        <div class="testimonial-slide active">
-          <div class="testimonial-card glass">
-            <div class="testimonial-quote">RouteForge AI showed us exactly where we were leaking money. The waste reduction insights alone paid for the platform in the first month.</div>
-            <div class="testimonial-author">Sarah O'Brien</div>
-            <div class="testimonial-role">Owner, The Green Pantry Cafe, Dublin 2</div>
+          <div class="dash-agents">
+            <div class="dash-agent-row"><span class="pulse-dot active"></span> Researcher AI &mdash; Analyzing market data</div>
+            <div class="dash-agent-row"><span class="pulse-dot active"></span> Designer AI &mdash; Optimising menu</div>
+            <div class="dash-agent-row"><span class="pulse-dot processing"></span> Maker AI &mdash; Processing inventory</div>
           </div>
         </div>
-        <div class="testimonial-slide">
-          <div class="testimonial-card glass">
-            <div class="testimonial-quote">We were intimidated by the EU AI Act. RouteForge broke it down into simple steps. Now we're compliant and actually using AI to grow.</div>
-            <div class="testimonial-author">David O'Connor</div>
-            <div class="testimonial-role">Manager, The Copper Kettle, Dublin 8</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-strip reveal">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><div class="stat-number" data-count="10000">0</div><div class="stat-label">Meals Forecasted Daily</div></div>
+      <div class="stat-item"><div class="stat-number" data-count="2400">0</div><div class="stat-label">Staff Hours Optimised</div></div>
+      <div class="stat-item"><div class="stat-number" data-count="99">0<span style="font-size:1.2rem;">%</span></div><div class="stat-label">Forecast Accuracy</div></div>
+      <div class="stat-item"><div class="stat-number" data-count="5">0<span style="font-size:1.2rem;">M+</span></div><div class="stat-label">Euros Saved for Clients</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="benefits">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">From Data to Decision<br>in Three Steps</h2>
+      <p class="section-subtitle">RouteForge AI connects your business data and turns it into actionable intelligence — no data science degree required.</p>
+    </div>
+    <div class="flip-card-row">
+      <div class="flip-card reveal">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="flip-icon">📊</div>
+            <h3>Assess</h3>
+            <p>Connect your POS, schedules, and inventory. We analyse historical patterns in minutes.</p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Assess</h3>
+            <p>Import sales data, staff rotas, and stock levels. Our AI identifies patterns, peak periods, and inefficiencies automatically.</p>
+            <a href="how-it-works.html" class="btn">Learn More</a>
           </div>
         </div>
-        <div class="testimonial-slide">
-          <div class="testimonial-card glass">
-            <div class="testimonial-quote">The 5-agent system feels like having a whole team behind you. Research, design, build, market — it's all there. Game changer for small businesses like ours.</div>
-            <div class="testimonial-author">Mairead Walsh</div>
-            <div class="testimonial-role">Co-Founder, Dublin Bread Co., Dublin 1</div>
+      </div>
+      <div class="flip-card reveal">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="flip-icon">⚙️</div>
+            <h3>Build</h3>
+            <p>AI generates demand forecasts, optimal schedules, and smart inventory plans.</p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Build</h3>
+            <p>Get daily demand predictions, staff rosters that match traffic, and purchasing plans that minimise waste — all tailored to your business.</p>
+            <a href="how-it-works.html" class="btn">Learn More</a>
           </div>
         </div>
-        <div class="testimonial-slide">
-          <div class="testimonial-card glass">
-            <div class="testimonial-quote">What took us months of trial and error, RouteForge helped us figure out in weeks. The dynamic pricing recommendations increased our margins by 12%.</div>
-            <div class="testimonial-author">Paulo Silva</div>
-            <div class="testimonial-role">Head Chef, Mercado Restaurant, Dublin 7</div>
+      </div>
+      <div class="flip-card reveal">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="flip-icon">📈</div>
+            <h3>Grow</h3>
+            <p>Real-time insights, automated alerts, and recommendations that improve daily.</p>
+          </div>
+          <div class="flip-card-back">
+            <h3>Grow</h3>
+            <p>Track performance, receive smart alerts when things drift, and get actionable recommendations that improve margins, reduce waste, and grow revenue.</p>
+            <a href="how-it-works.html" class="btn">Learn More</a>
           </div>
         </div>
-        <div class="testimonial-dots" id="testimonialDots"></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section section-wave">
-    <div class="container">
-      <div class="reveal">
-        <span class="section-label">Pricing</span>
-        <div class="section-divider"></div>
-        <h2 class="section-title">Flexible plans for every business</h2>
-        <p class="section-subtitle">Start free, scale as you grow. No hidden fees, no lock-in.</p>
+<section class="section" style="background:var(--surface);">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Testimonials</div>
+      <h2 class="section-title">Trusted by F&B<br>Operators Like You</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote">"RouteForge helped us cut food waste by 22% in the first month. The demand forecasts are scarily accurate — within 5% most days."</div>
+        <div class="testimonial-author">Sarah Chen</div>
+        <div class="testimonial-role">Owner, The Daily Grind Cafe</div>
       </div>
-      <div class="pricing-grid">
-        <div class="pricing-card glass reveal reveal-delay-1">
-          <h3>Starter</h3>
-          <div class="pricing-sub">For small cafes &amp; restaurants</div>
-          <div class="pricing-amount">&euro;0</div>
-          <div class="pricing-period">Free &mdash; no credit card</div>
-          <ul class="pricing-features">
-            <li>Free AI audit &amp; compliance check</li>
-            <li>Basic waste analysis report</li>
-            <li>1 active agent workflow</li>
-            <li>Email support</li>
-          </ul>
-          <a href="contact.html" class="btn btn-outline">Get Started Free</a>
-        </div>
-        <div class="pricing-card glass featured reveal reveal-delay-2">
-          <div class="pricing-badge">Most Popular</div>
-          <h3>Business</h3>
-          <div class="pricing-sub">For growing F&amp;B businesses</div>
-          <div class="pricing-amount">&euro;49</div>
-          <div class="pricing-period">/month &mdash; or &euro;490/year</div>
-          <ul class="pricing-features">
-            <li>Everything in Starter</li>
-            <li>Full 5-agent team access</li>
-            <li>Custom AI roadmap &amp; strategy</li>
-            <li>Real-time dashboard &amp; reporting</li>
-            <li>Priority support &amp; onboarding</li>
-          </ul>
-          <a href="contact.html" class="btn btn-primary">Start Free Trial</a>
-        </div>
-        <div class="pricing-card glass reveal reveal-delay-3">
-          <h3>Enterprise</h3>
-          <div class="pricing-sub">For multi-location &amp; chains</div>
-          <div class="pricing-amount">Custom</div>
-          <div class="pricing-period">Tailored to your business</div>
-          <ul class="pricing-features">
-            <li>Everything in Business</li>
-            <li>Unlimited agent workflows</li>
-            <li>Custom integrations &amp; API access</li>
-            <li>Dedicated account manager</li>
-            <li>SLA &amp; compliance advisory</li>
-          </ul>
-          <a href="contact.html" class="btn btn-outline">Contact Us</a>
-        </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote">"Staff scheduling used to take me 3 hours every week. Now it's automated and actually matches our busy periods better than I ever could."</div>
+        <div class="testimonial-author">James O'Brien</div>
+        <div class="testimonial-role">GM, The Bistro Dublin</div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote">"The dashboard gives me a real-time pulse on the business. I can see revenue projections, waste trends, and staff efficiency all in one place."</div>
+        <div class="testimonial-author">Maria Torres</div>
+        <div class="testimonial-role">Operations Director, La Cucina Group</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section section-wave">
-    <div class="container">
-      <div class="reveal">
-        <span class="section-label">Frequently Asked Questions</span>
-        <div class="section-divider"></div>
-        <h2 class="section-title">Everything you need to know</h2>
-        <p class="section-subtitle">Common questions about RouteForge AI, EU AI Act compliance, and getting started.</p>
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">Pricing</div>
+      <h2 class="section-title">Start Free, Scale<br>When You're Ready</h2>
+      <p class="section-subtitle">No hidden fees. No long-term contracts. Cancel anytime.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card reveal">
+        <div class="pricing-name">Starter</div>
+        <div class="pricing-desc">For small cafes testing the waters</div>
+        <div class="pricing-amount"><span class="currency">€</span>0</div>
+        <div class="pricing-period">Free forever</div>
+        <ul class="pricing-features">
+          <li>Basic demand forecasting</li>
+          <li>Weekly email reports</li>
+          <li>Up to 2 data sources</li>
+          <li>Community support</li>
+        </ul>
+        <a href="contact.html" class="btn btn-outline">Get Started</a>
       </div>
-      <div class="faq-list reveal">
-        <div class="faq-item glass">
-          <button class="faq-question">
-            Is RouteForge AI compliant with the EU AI Act?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer"><p>Yes. RouteForge AI is built from the ground up with the EU AI Act's risk-based framework in mind. Every recommendation is traceable, explainable, and auditable. We follow the transparency obligations and human oversight requirements set out in the regulation. Our architecture ensures your business stays compliant as the Act evolves.</p></div>
-        </div>
-        <div class="faq-item glass">
-          <button class="faq-question">
-            How much does RouteForge AI cost?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer"><p>RouteForge AI is designed to be affordable for small and medium F&B businesses. We offer a tiered pricing model starting from a free audit phase. Specific pricing depends on your business size and needs. Contact our team for a custom quote and we'll find a plan that works for your budget.</p></div>
-        </div>
-        <div class="faq-item glass">
-          <button class="faq-question">
-            Do I need technical skills to use it?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer"><p>Not at all. RouteForge AI is built for business owners, not data scientists. Our five-agent system handles all the technical complexity. You simply describe your goals and our agents do the rest — research, analysis, design, building, and marketing recommendations are all delivered in plain language.</p></div>
-        </div>
-        <div class="faq-item glass">
-          <button class="faq-question">
-            What kind of data does RouteForge need?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer"><p>We start with whatever data you have — sales records, customer lists, or even just your menu. Our Researcher Agent works with available information and identifies gaps. All data is processed in compliance with GDPR and the EU AI Act. We never share or sell your business data.</p></div>
-        </div>
-        <div class="faq-item glass">
-          <button class="faq-question">
-            How long does it take to see results?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer"><p>Most businesses see actionable insights within the first week. The initial audit phase takes 2-3 days, followed by a custom strategy. Many of our pilot users reported measurable improvements in waste reduction, customer retention, and margin within the first month of implementation.</p></div>
-        </div>
-        <div class="faq-item glass">
-          <button class="faq-question">
-            Is this just for restaurants or all F&B businesses?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer"><p>RouteForge AI serves the full spectrum of Food & Beverage businesses: restaurants, cafes, pubs, fast food, catering companies, hotels, and food producers. Our agents adapt to your specific business model, whether you're a fine dining restaurant in Dublin 4 or a catering startup in Dublin 15.</p></div>
-        </div>
+      <div class="pricing-card featured reveal" style="transform:translateY(-8px);">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-name">Business</div>
+        <div class="pricing-desc">For growing restaurants and chains</div>
+        <div class="pricing-amount"><span class="currency">€</span>49</div>
+        <div class="pricing-period">per month</div>
+        <ul class="pricing-features">
+          <li>Real-time AI forecasts</li>
+          <li>Staff optimisation engine</li>
+          <li>Inventory waste tracking</li>
+          <li>Unlimited data sources</li>
+          <li>Slack &amp; email alerts</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Start Free Trial</a>
+      </div>
+      <div class="pricing-card reveal">
+        <div class="pricing-name">Enterprise</div>
+        <div class="pricing-desc">For multi-location operators</div>
+        <div class="pricing-amount"><span class="currency">€</span>Custom</div>
+        <div class="pricing-period">tailored pricing</div>
+        <ul class="pricing-features">
+          <li>Everything in Business</li>
+          <li>Multi-location dashboard</li>
+          <li>Custom AI model training</li>
+          <li>API access &amp; integrations</li>
+          <li>Dedicated account manager</li>
+          <li>99.9% SLA guarantee</li>
+        </ul>
+        <a href="contact.html" class="btn btn-outline">Contact Us</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section section-alt section-wave">
-    <div class="container">
-      <div class="reveal">
-        <span class="section-label">Trusted by</span>
-        <div class="section-divider"></div>
-        <h2 class="section-title">Recognised across Dublin's innovation ecosystem</h2>
-        <p class="section-subtitle">From TU Dublin to the National College of Ireland &mdash; built with academic rigour and real-world impact.</p>
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Questions? We've<br>Got Answers</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question"><span>What data does RouteForge need to get started?</span><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><p>Just your POS sales data and staff schedules. We'll guide you through connecting everything in under 15 minutes. Inventory data is optional but recommended for waste tracking.</p></div>
       </div>
-      <div class="marquee-wrap reveal">
-        <div class="marquee">
-          <div class="marquee-item"><span class="marquee-icon">&#127891;</span> National College of Ireland</div>
-          <div class="marquee-item"><span class="marquee-icon">&#127942;</span> TU Dublin Ambassador Showcase</div>
-          <div class="marquee-item"><span class="marquee-icon">&#9878;</span> EU AI Act Compliant</div>
-          <div class="marquee-item"><span class="marquee-icon">&#128640;</span> Live Prototype Available</div>
-          <div class="marquee-item"><span class="marquee-icon">&#128200;</span> 2,000+ Dublin F&amp;B SMEs</div>
-          <div class="marquee-item"><span class="marquee-icon">&#127891;</span> National College of Ireland</div>
-          <div class="marquee-item"><span class="marquee-icon">&#127942;</span> TU Dublin Ambassador Showcase</div>
-          <div class="marquee-item"><span class="marquee-icon">&#9878;</span> EU AI Act Compliant</div>
-          <div class="marquee-item"><span class="marquee-icon">&#128640;</span> Live Prototype Available</div>
-          <div class="marquee-item"><span class="marquee-icon">&#128200;</span> 2,000+ Dublin F&amp;B SMEs</div>
-        </div>
+      <div class="faq-item">
+        <div class="faq-question"><span>How accurate are the demand forecasts?</span><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><p>Our models typically achieve 94%+ accuracy after the initial 2-week learning period. Accuracy improves over time as the AI learns your specific patterns, seasonality, and local events.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><span>Is my data secure and GDPR compliant?</span><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><p>Absolutely. All data is encrypted at rest and in transit. We are fully GDPR compliant, EU-hosted, and never share your data with third parties. We also comply with the EU AI Act requirements.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><span>Can I cancel anytime?</span><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><p>Yes — no contracts, no cancellation fees. If you cancel, you'll retain access until the end of your billing period. Your data is yours and can be exported at any time.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question"><span>How is this different from my current POS analytics?</span><span class="faq-icon">+</span></div>
+        <div class="faq-answer"><p>Most POS systems show you what happened. RouteForge predicts what will happen and tells you exactly what to do about it — from optimal staff levels to purchasing quantities to pricing recommendations.</p></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="cta-banner section-wave">
-    <div class="container">
-      <div class="reveal">
-        <h2>Ready to transform your F&amp;B business?</h2>
-        <p>Join Dublin's food community leveraging AI to reduce waste, stay compliant, and grow smarter.</p>
-        <a href="contact.html" class="btn btn-primary">Get Started Today &rarr;</a>
+<section class="section" style="padding-bottom:0;">
+  <div class="container">
+    <div class="cta-banner reveal">
+      <h2>Ready to transform your F&B business?</h2>
+      <p>Join hundreds of cafes and restaurants using AI to work smarter, reduce waste, and grow revenue.</p>
+      <a href="contact.html" class="btn">Start Free Trial &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-text"><span style="color:var(--accent);">R</span>oute<span style="color:var(--accent);font-weight:700;">Forge</span> AI</div>
+        <p>AI-powered intelligence for the food &amp; beverage industry. Forecast, optimise, and grow with confidence.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul class="footer-links">
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="use-cases.html">Use Cases</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="about.html">Team</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">GDPR</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="nav-logo">
-            <span class="nav-logo-icon">R</span>
-            RouteForge AI
-          </a>
-          <p>AI-powered advisory for Food &amp; Beverage SMEs in Dublin. Built by students at the National College of Ireland.</p>
-        </div>
-        <div>
-          <h4>Pages</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="how-it-works.html">How It Works</a></li>
-            <li><a href="use-cases.html">Use Cases</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Resources</h4>
-          <ul class="footer-links">
-            <li><a href="https://fb-ai-advisor.lovable.app/" target="_blank">Live Demo</a></li>
-            <li><a href="https://github.com/chrisgomes1211/routeforgeai-website" target="_blank">GitHub</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Connect</h4>
-          <ul class="footer-links">
-            <li><a href="contact.html">Get in Touch</a></li>
-            <li><a href="https://www.ncirl.ie/" target="_blank">NCI</a></li>
-            <li><a href="https://www.linkedin.com/school/national-college-of-ireland/" target="_blank">LinkedIn</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 RouteForge AI &mdash; National College of Ireland</span>
-        <div class="footer-bottom-links">
-          <a href="https://fb-ai-advisor.lovable.app/" target="_blank">Live Demo</a>
-          <a href="https://www.ncirl.ie/" target="_blank">NCI</a>
-        </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 RouteForge AI. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="https://github.com/chrisgomes1211/routeforgeai-website" target="_blank">GitHub</a>
+        <a href="sitemap.xml">Sitemap</a>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+<button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
 
-  <script>
-    // Hamburger menu
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
+<script>
+(function() {
+  var burger = document.getElementById('burger');
+  var navLinks = document.getElementById('navLinks');
+  if (burger) {
+    burger.addEventListener('click', function() {
+      burger.classList.toggle('open');
       navLinks.classList.toggle('open');
     });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
+    navLinks.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        burger.classList.remove('open');
         navLinks.classList.remove('open');
       });
     });
+  }
 
-    // Navbar scroll
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 50);
-      backToTop.classList.toggle('visible', window.scrollY > 500);
-    });
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function() {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
 
-    // Back to top
-    const backToTop = document.getElementById('backToTop');
-    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  var bt = document.getElementById('backToTop');
+  window.addEventListener('scroll', function() {
+    bt.classList.toggle('visible', window.scrollY > 500);
+  });
+  bt.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
-    // Scroll reveal
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
+  var ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        var scrollY = window.scrollY;
+        document.querySelectorAll('[data-speed]').forEach(function(el) {
+          var speed = parseFloat(el.getAttribute('data-speed')) || 0;
+          el.style.transform = 'translate3d(0,' + (scrollY * speed) + 'px,0)';
+        });
+        ticking = false;
       });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => revealObserver.observe(el));
-
-    // Animated counters
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.querySelectorAll('.stat-counter').forEach(counter => {
-            const target = parseInt(counter.dataset.target);
-            const duration = 2000;
-            const start = performance.now();
-            function update(now) {
-              const progress = Math.min((now - start) / duration, 1);
-              counter.textContent = Math.floor((1 - Math.pow(1 - progress, 3)) * target);
-              if (progress < 1) requestAnimationFrame(update);
-            }
-            requestAnimationFrame(update);
-          });
-          counterObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.5 });
-    const statsSection = document.getElementById('statsSection');
-    if (statsSection) counterObserver.observe(statsSection);
-
-    // Particles
-    const particles = document.getElementById('particles');
-    if (particles) {
-      for (let i = 0; i < 25; i++) {
-        const p = document.createElement('div');
-        p.className = 'particle';
-        p.style.left = Math.random() * 100 + '%';
-        const s = Math.random() * 4 + 2;
-        p.style.width = s + 'px';
-        p.style.height = s + 'px';
-        p.style.animationDuration = (Math.random() * 20 + 15) + 's';
-        p.style.animationDelay = Math.random() * 20 + 's';
-        particles.appendChild(p);
-      }
+      ticking = true;
     }
+  });
 
-    // Typewriter effect
-    const typewriterText = document.getElementById('typewriterText');
-    const typewriterCursor = document.getElementById('typewriterCursor');
-    if (typewriterText) {
-      const lines = ['AI shouldn\'t be a <span class="gradient-text">luxury</span>'];
-      let charIndex = 0;
-      function type() {
-        const html = lines[0];
-        const plain = html.replace(/<[^>]*>/g, '');
-        if (charIndex < plain.length) {
-          const before = plain.substring(0, charIndex + 1);
-          const inserted = html.includes('luxury') && charIndex >= html.indexOf('luxury') - 1
-            ? before.substring(0, before.indexOf('luxury')) + '<span class="gradient-text">' + plain.substring(plain.indexOf('luxury'), charIndex + 1) + '</span>'
-            : before;
-          typewriterText.innerHTML = before;
-          charIndex++;
-          setTimeout(type, 45);
-        } else {
-          typewriterText.innerHTML = html;
-          typewriterCursor.style.animation = 'none';
-          typewriterCursor.style.opacity = '1';
-        }
-      }
-      type();
-    }
-
-    // 3D Tilt Cards
-    document.querySelectorAll('.tilt-card').forEach(card => {
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-        card.style.transform = `perspective(1000px) rotateX(${y * -6}deg) rotateY(${x * 6}deg) translateY(-4px)`;
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = '';
-      });
-    });
-
-    // Cursor glow
-    const cursorGlow = document.getElementById('cursorGlow');
-    let cursorTimer;
-    document.addEventListener('mousemove', (e) => {
-      cursorGlow.style.left = e.clientX + 'px';
-      cursorGlow.style.top = e.clientY + 'px';
-      cursorGlow.classList.add('visible');
-      clearTimeout(cursorTimer);
-      cursorTimer = setTimeout(() => cursorGlow.classList.remove('visible'), 2000);
-    });
-
-    // Testimonial carousel
-    const slides = document.querySelectorAll('.testimonial-slide');
-    const dotsContainer = document.getElementById('testimonialDots');
-    let currentSlide = 0;
-    if (slides.length) {
-      slides.forEach((_, i) => {
-        const dot = document.createElement('button');
-        dot.className = 'testimonial-dot' + (i === 0 ? ' active' : '');
-        dot.addEventListener('click', () => goToSlide(i));
-        dotsContainer.appendChild(dot);
-      });
-      function goToSlide(index) {
-        slides.forEach(s => s.classList.remove('active'));
-        dotsContainer.querySelectorAll('.testimonial-dot').forEach(d => d.classList.remove('active'));
-        slides[index].classList.add('active');
-        dotsContainer.children[index].classList.add('active');
-        currentSlide = index;
-      }
-      setInterval(() => goToSlide((currentSlide + 1) % slides.length), 5000);
-    }
-
-    // FAQ accordion
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.parentElement;
-        const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-        if (!isOpen) item.classList.add('open');
-      });
-    });
-
-    // Parallax hero image
-    const heroImage = document.querySelector('.hero-image-overlay');
-    window.addEventListener('scroll', () => {
-      const sy = window.scrollY;
-      if (heroImage && sy < window.innerHeight) {
-        heroImage.style.transform = `scale(1.1) translateY(${sy * 0.05}px)`;
+  var revealEls = document.querySelectorAll('.reveal');
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
       }
     });
-  </script>
+  }, { threshold: 0.1 });
+  revealEls.forEach(function(el) { revealObserver.observe(el); });
+
+  var counters = document.querySelectorAll('[data-count]');
+  var counterObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        var target = parseInt(el.getAttribute('data-count'));
+        var current = 0;
+        var increment = Math.ceil(target / 60);
+        var timer = setInterval(function() {
+          current += increment;
+          if (current >= target) { current = target; clearInterval(timer); }
+          el.textContent = current.toLocaleString();
+        }, 25);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(function(el) { counterObserver.observe(el); });
+
+  var faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function(item) {
+    item.querySelector('.faq-question').addEventListener('click', function() {
+      item.classList.toggle('open');
+    });
+  });
+})();
+</script>
 </body>
 </html>

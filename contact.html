@@ -1,269 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact — RouteForge AI</title>
-  <meta name="description" content="Get in touch with the RouteForge AI team. Book a demo or start your AI journey.">
-  <meta property="og:title" content="Contact — RouteForge AI">
-  <meta property="og:description" content="Get in touch with the RouteForge AI team. Book a demo or start your AI journey.">
-  <meta property="og:url" content="https://chrisgomes1211.github.io/routeforgeai-website/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://chrisgomes1211.github.io/routeforgeai-website/assets/routeforge-logo.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact — RouteForge AI">
-  <meta name="twitter:description" content="Get in touch with the RouteForge AI team. Book a demo or start your AI journey.">
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "RouteForge AI",
-    "applicationCategory": "BusinessApplication",
-    "description": "Five-agent AI advisory platform for F&B SMEs in Dublin. EU AI Act compliant.",
-    "author": {
-      "@type": "Organization",
-      "name": "RouteForge AI",
-      "url": "https://chrisgomes1211.github.io/routeforgeai-website/"
-    }
-  }
-
-  </script>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/routeforge-logo-sm.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — RouteForge AI</title>
+<meta name="description" content="Get in touch with the RouteForge AI team. Start your free trial, ask questions, or share feedback.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="nav" id="nav">
-    <div class="container">
-      <a href="index.html" class="nav-logo">
-        <span class="nav-logo-icon">R</span>
-        RouteForge AI
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="how-it-works.html">How It Works</a></li>
-        <li><a href="use-cases.html">Use Cases</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-        <li class="nav-cta"><a href="https://fb-ai-advisor.lovable.app/" class="btn btn-primary btn-sm" target="_blank">Live Demo</a></li>
-        
-      </ul>
-    </div>
-  </nav>
 
-  <section class="page-header animated-gradient">
-    <div class="page-header-bg-img"></div>
-    <div class="page-header-glow"></div>
-    <div class="container">
-      <div class="reveal">
-        <span class="section-label">Get In Touch</span>
-        <div class="section-divider"></div>
-        <h1>Contact us</h1>
-        <p>Ready to bring AI to your F&B business? Reach out to the RouteForge AI team.</p>
+<nav class="nav" id="nav">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><span style="color:var(--accent);font-weight:800;">R</span><span style="color:var(--text);font-weight:300;">oute</span><span style="color:var(--accent);font-weight:700;">Forge</span> <span style="color:var(--text-muted);font-weight:300;font-size:0.75rem;">AI</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="use-cases.html">Use Cases</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="container">
+    <div class="section-label reveal">Contact</div>
+    <h1 class="reveal">Let's Build Something<br><span style="background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Intelligent Together</span></h1>
+    <p class="reveal">Have questions about RouteForge AI? Want a demo? Or just want to say hello — we'd love to hear from you.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="form-card reveal">
+        <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:24px;">Send us a message</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="type">I'm interested in</label>
+            <select id="type" name="type">
+              <option value="">Select an option</option>
+              <option value="trial">Starting a free trial</option>
+              <option value="demo">Booking a demo</option>
+              <option value="question">Asking a question</option>
+              <option value="partnership">Partnership inquiry</option>
+              <option value="other">Something else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Tell us about your business and how we can help..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Message &rarr;</button>
+        </form>
       </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="contact-wrapper">
-        <div>
-          <div class="reveal">
-            <span class="section-label" style="text-align:left;">Send a Message</span>
-            <h2 class="section-title" style="text-align:left;font-size:1.8rem;">Let's talk about your business</h2>
-            <p class="section-subtitle" style="text-align:left;">Tell us about your F&B business and we'll show you how RouteForge AI can help.</p>
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        <div class="contact-info-card reveal">
+          <div class="icon-box">📧</div>
+          <div>
+            <h4>Email</h4>
+            <p>Drop us a line anytime</p>
+            <a href="mailto:hello@routeforge.ai" class="contact-link">hello@routeforge.ai</a>
           </div>
-          <form class="contact-form reveal" id="contactForm">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your full name" required>
-            </div>
-            <div class="form-group">
-              <label for="business">Business Type</label>
-              <select id="business" name="business" required>
-                <option value="">Select your business type</option>
-                <option value="restaurant">Restaurant</option>
-                <option value="cafe">Cafe / Coffee Shop</option>
-                <option value="pub">Pub / Bar</option>
-                <option value="takeaway">Takeaway / Fast Food</option>
-                <option value="hotel">Hotel / Hospitality</option>
-                <option value="catering">Catering Company</option>
-                <option value="other">Other F&amp;B</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Tell us about your business and what you're looking for..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
-              Send Message <span style="font-size:1.1rem;">&rarr;</span>
-            </button>
-          </form>
         </div>
-        <div class="contact-info">
-          <div class="contact-info-card reveal reveal-delay-1 shine">
-            <h3>&#128640; Try the Live Demo</h3>
-            <p>Experience RouteForge AI right now. No sign-up needed.</p>
-            <a href="https://fb-ai-advisor.lovable.app/" target="_blank" class="contact-link">
-              Launch Live Demo &rarr;
-            </a>
+        <div class="contact-info-card reveal">
+          <div class="icon-box">📍</div>
+          <div>
+            <h4>Location</h4>
+            <p>Dublin, Ireland</p>
+            <a href="https://maps.google.com" target="_blank" class="contact-link">View on map</a>
           </div>
-          <div class="contact-info-card reveal reveal-delay-2 shine">
-            <h3>&#128279; LinkedIn</h3>
-            <p>Connect with us on LinkedIn for updates, research insights, and F&B AI news.</p>
-            <a href="https://www.linkedin.com/school/national-college-of-ireland/" target="_blank" class="contact-link">
-              Follow us on LinkedIn &rarr;
-            </a>
+        </div>
+        <div class="contact-info-card reveal">
+          <div class="icon-box">💬</div>
+          <div>
+            <h4>Start Free Trial</h4>
+            <p>Get started in under 15 minutes</p>
+            <a href="index.html#pricing" class="contact-link">See pricing &rarr;</a>
           </div>
-          <div class="contact-info-card reveal reveal-delay-3 shine">
-            <h3>&#127891; Academic Home</h3>
-            <p>This project is developed at the National College of Ireland under the supervision of Prof. Sallar Khan.</p>
-            <a href="https://www.ncirl.ie/" target="_blank" class="contact-link">
-              Visit NCI &rarr;
-            </a>
+        </div>
+        <div class="contact-info-card reveal">
+          <div class="icon-box">🐙</div>
+          <div>
+            <h4>GitHub</h4>
+            <p>Follow our development</p>
+            <a href="https://github.com/chrisgomes1211/routeforgeai-website" target="_blank" class="contact-link">View repository</a>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section section-alt">
-    <div class="container">
-      <div class="reveal">
-        <span class="section-label">Recognition</span>
-        <div class="section-divider"></div>
-        <h2 class="section-title">Showcased at TU Dublin</h2>
-        <p class="section-subtitle">RouteForge AI was selected for the TU Dublin Ambassador Presentation, demonstrating the impact of AI-driven innovation in Dublin's food sector.</p>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-text"><span style="color:var(--accent);">R</span>oute<span style="color:var(--accent);font-weight:700;">Forge</span> AI</div>
+        <p>AI-powered intelligence for the food &amp; beverage industry.</p>
       </div>
-      <div class="social-proof">
-        <div class="social-proof-card reveal reveal-delay-1">
-          <div class="badge-icon">&#127942;</div>
-          <h4>Ambassador Selection</h4>
-          <p>Chosen to represent student AI innovation at the TU Dublin Ambassador showcase event.</p>
-        </div>
-        <div class="social-proof-card reveal reveal-delay-2">
-          <div class="badge-icon">&#128640;</div>
-          <h4>Live Prototype</h4>
-          <p>Fully functional demo available at <a href="https://fb-ai-advisor.lovable.app/" target="_blank">fb-ai-advisor.lovable.app</a></p>
-        </div>
-        <div class="social-proof-card reveal reveal-delay-3">
-          <div class="badge-icon">&#128218;</div>
-          <h4>NCI Research Project</h4>
-          <p>Part of the MSc programme at the National College of Ireland, supervised by Prof. Sallar Khan.</p>
-        </div>
-      </div>
+      <div><h4>Product</h4><ul class="footer-links"><li><a href="how-it-works.html">How It Works</a></li><li><a href="use-cases.html">Use Cases</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li></ul></div>
+      <div><h4>Legal</h4><ul class="footer-links"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul></div>
     </div>
-  </section>
+    <div class="footer-bottom"><p>&copy; 2026 RouteForge AI.</p><div class="footer-bottom-links"><a href="https://github.com/chrisgomes1211/routeforgeai-website" target="_blank">GitHub</a><a href="sitemap.xml">Sitemap</a></div></div>
+  </div>
+</footer>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="nav-logo">
-            <span class="nav-logo-icon">R</span>
-            RouteForge AI
-          </a>
-          <p>AI-powered advisory for Food &amp; Beverage SMEs in Dublin. Built by students at the National College of Ireland.</p>
-        </div>
-        <div>
-          <h4>Pages</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="how-it-works.html">How It Works</a></li>
-            <li><a href="use-cases.html">Use Cases</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Resources</h4>
-          <ul class="footer-links">
-            <li><a href="https://fb-ai-advisor.lovable.app/" target="_blank">Live Demo</a></li>
-            <li><a href="https://github.com/chrisgomes1211/routeforgeai-website" target="_blank">GitHub</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Connect</h4>
-          <ul class="footer-links">
-            <li><a href="contact.html">Get in Touch</a></li>
-            <li><a href="https://www.ncirl.ie/" target="_blank">NCI</a></li>
-            <li><a href="https://www.linkedin.com/school/national-college-of-ireland/" target="_blank">LinkedIn</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 RouteForge AI &mdash; National College of Ireland</span>
-        <div class="footer-bottom-links">
-          <a href="https://fb-ai-advisor.lovable.app/" target="_blank">Live Demo</a>
-          <a href="https://www.ncirl.ie/" target="_blank">NCI</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+<button class="back-to-top" id="backToTop">&uarr;</button>
 
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+<script>
+(function() {
+  var b = document.getElementById('burger'), nl = document.getElementById('navLinks');
+  if (b) { b.addEventListener('click', function() { b.classList.toggle('open'); nl.classList.toggle('open'); }); nl.querySelectorAll('a').forEach(function(l) { l.addEventListener('click', function() { b.classList.remove('open'); nl.classList.remove('open'); }); }); }
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function() { nav.classList.toggle('scrolled', window.scrollY > 50); });
+  var bt = document.getElementById('backToTop');
+  window.addEventListener('scroll', function() { bt.classList.toggle('visible', window.scrollY > 500); });
+  bt.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  var ro = new IntersectionObserver(function(e) { e.forEach(function(en) { if (en.isIntersecting) { en.target.classList.add('visible'); } }); }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(function(el) { ro.observe(el); });
 
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('open');
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('open');
-      });
-    });
-
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) nav.classList.add('scrolled');
-      else nav.classList.remove('scrolled');
-    });
-
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 500) backToTop.classList.add('visible');
-      else backToTop.classList.remove('visible');
-    });
-    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
-      revealObserver.observe(el);
-    });
-
-    const form = document.getElementById('contactForm');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = form.querySelector('button[type="submit"]');
-      btn.textContent = 'Message sent! We\'ll be in touch.';
-      btn.style.background = '#ffb000';
-      btn.disabled = true;
-      setTimeout(() => {
-        btn.innerHTML = 'Send Message <span style="font-size:1.1rem;">&rarr;</span>';
-        btn.style.background = '';
-        btn.disabled = false;
-        form.reset();
-      }, 3000);
-    });
-  </script>
+  var form = document.getElementById('contactForm');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    btn.textContent = 'Message sent! We\'ll be in touch.';
+    btn.style.background = '#10b981';
+    btn.disabled = true;
+    setTimeout(function() {
+      btn.innerHTML = 'Send Message &rarr;';
+      btn.style.background = '';
+      btn.disabled = false;
+      form.reset();
+    }, 3000);
+  });
+})();
+</script>
 </body>
 </html>

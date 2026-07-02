@@ -1,295 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How It Works — RouteForge AI</title>
-  <meta name="description" content="How the five-agent AI pipeline works — from audit to action.">
-  <meta property="og:title" content="How It Works — RouteForge AI">
-  <meta property="og:description" content="How the five-agent AI pipeline works — from audit to action.">
-  <meta property="og:url" content="https://chrisgomes1211.github.io/routeforgeai-website/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://chrisgomes1211.github.io/routeforgeai-website/assets/routeforge-logo.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="How It Works — RouteForge AI">
-  <meta name="twitter:description" content="How the five-agent AI pipeline works — from audit to action.">
-  
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "RouteForge AI",
-    "applicationCategory": "BusinessApplication",
-    "description": "Five-agent AI advisory platform for F&B SMEs in Dublin. EU AI Act compliant.",
-    "author": {
-      "@type": "Organization",
-      "name": "RouteForge AI",
-      "url": "https://chrisgomes1211.github.io/routeforgeai-website/"
-    }
-  }
-
-  </script>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/routeforge-logo-sm.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How It Works — RouteForge AI</title>
+<meta name="description" content="Meet the five AI agents that power RouteForge: Researcher, Designer, Maker, Marketer, and Manager.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="nav" id="nav">
-    <div class="container">
-      <a href="index.html" class="nav-logo">
-        <span class="nav-logo-icon">R</span>
-        RouteForge AI
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="how-it-works.html" class="active">How It Works</a></li>
-        <li><a href="use-cases.html">Use Cases</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li class="nav-cta"><a href="https://fb-ai-advisor.lovable.app/" class="btn btn-primary btn-sm" target="_blank">Live Demo</a></li>
-        
-      </ul>
+
+<nav class="nav" id="nav">
+  <div class="nav-container">
+    <a href="index.html" class="nav-logo"><span style="color:var(--accent);font-weight:800;">R</span><span style="color:var(--text);font-weight:300;">oute</span><span style="color:var(--accent);font-weight:700;">Forge</span> <span style="color:var(--text-muted);font-weight:300;font-size:0.75rem;">AI</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="how-it-works.html" class="active">How It Works</a>
+      <a href="use-cases.html">Use Cases</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </nav>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
 
-  <section class="page-header animated-gradient">
-    <div class="page-header-bg-img"></div>
-    <div class="page-header-glow"></div>
-    <div class="container">
-      <div class="reveal">
-        <span class="section-label">The Pipeline</span>
-        <div class="section-divider"></div>
-        <h1>How RouteForge AI works</h1>
-        <p>Five specialist agents. One orchestrator. A seamless pipeline from audit to action.</p>
+<section class="page-header">
+  <div class="container">
+    <div class="section-label reveal">The AI Pipeline</div>
+    <h1 class="reveal">Meet Your<br><span style="background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">AI Team</span></h1>
+    <p class="reveal">Five specialised AI agents working together to turn your data into growth.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="agent-flow">
+      <div class="agent-flow-line"></div>
+
+      <div class="agent-flip-card reveal">
+        <div class="agent-step">01</div>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="agent-icon-box"><img src="assets/agent-researcher.svg" alt="Researcher"></div>
+            <div>
+              <h3 style="margin-bottom:4px;font-size:1.1rem;">Researcher</h3>
+              <p style="font-size:0.85rem;color:var(--text-muted);">Analyses market trends, customer behaviour, and historical data</p>
+            </div>
+          </div>
+          <div class="flip-card-back" style="text-align:left;">
+            <h3 style="font-size:1.1rem;">Researcher AI</h3>
+            <p style="font-size:0.85rem;opacity:0.9;">Scans market data, analyses past sales, identifies patterns and seasonality. Detects emerging trends and local events that impact demand.</p>
+          </div>
+        </div>
       </div>
+
+      <div class="agent-flip-card reveal">
+        <div class="agent-step">02</div>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="agent-icon-box"><img src="assets/agent-designer.svg" alt="Designer"></div>
+            <div>
+              <h3 style="margin-bottom:4px;font-size:1.1rem;">Designer</h3>
+              <p style="font-size:0.85rem;color:var(--text-muted);">Optimises menu pricing, layout, and product mix based on data</p>
+            </div>
+          </div>
+          <div class="flip-card-back" style="text-align:left;">
+            <h3 style="font-size:1.1rem;">Designer AI</h3>
+            <p style="font-size:0.85rem;opacity:0.9;">Analyses menu performance, suggests pricing adjustments, and recommends product mix changes to maximise margin without sacrificing volume.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="agent-flip-card reveal">
+        <div class="agent-step">03</div>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="agent-icon-box"><img src="assets/agent-maker.svg" alt="Maker"></div>
+            <div>
+              <h3 style="margin-bottom:4px;font-size:1.1rem;">Maker</h3>
+              <p style="font-size:0.85rem;color:var(--text-muted);">Generates demand forecasts, staff schedules, and inventory plans</p>
+            </div>
+          </div>
+          <div class="flip-card-back" style="text-align:left;">
+            <h3 style="font-size:1.1rem;">Maker AI</h3>
+            <p style="font-size:0.85rem;opacity:0.9;">Takes insights from Researcher and Designer to generate daily demand forecasts, optimal staff rotas, and smart purchasing plans that minimise waste.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="agent-flip-card reveal">
+        <div class="agent-step">04</div>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="agent-icon-box"><img src="assets/agent-marketer.svg" alt="Marketer"></div>
+            <div>
+              <h3 style="margin-bottom:4px;font-size:1.1rem;">Marketer</h3>
+              <p style="font-size:0.85rem;color:var(--text-muted);">Tracks campaign performance and customer engagement</p>
+            </div>
+          </div>
+          <div class="flip-card-back" style="text-align:left;">
+            <h3 style="font-size:1.1rem;">Marketer AI</h3>
+            <p style="font-size:0.85rem;opacity:0.9;">Monitors marketing ROI, tracks customer acquisition costs, identifies your most effective channels, and recommends where to invest your marketing budget.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="agent-flip-card reveal">
+        <div class="agent-step">05</div>
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="agent-icon-box"><img src="assets/agent-manager.svg" alt="Manager"></div>
+            <div>
+              <h3 style="margin-bottom:4px;font-size:1.1rem;">Manager</h3>
+              <p style="font-size:0.85rem;color:var(--text-muted);">Orchestrates all agents and provides unified recommendations</p>
+            </div>
+          </div>
+          <div class="flip-card-back" style="text-align:left;">
+            <h3 style="font-size:1.1rem;">Manager AI</h3>
+            <p style="font-size:0.85rem;opacity:0.9;">The orchestrator. Combines outputs from all agents, resolves conflicts, and presents a unified dashboard with clear, prioritised recommendations for your business.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section pipeline">
-    <div class="container">
-      <div class="reveal">
-        <span class="section-label">The Five Agents</span>
-        <div class="section-divider"></div>
-        <h2 class="section-title">Meet your AI team</h2>
-        <p class="section-subtitle">Each agent is a specialist. Together they form an end-to-end intelligence engine for your F&B business.</p>
-      </div>
-      <div class="pipeline-visual">
-        <div class="pipeline-agent reveal reveal-delay-1">
-          <div class="pipeline-arrow">&#8595;</div>
-          <div class="agent-color yellow">
-            <img src="assets/agent-researcher.svg" alt="Researcher" class="agent-avatar-svg">
-            Researcher
-          </div>
-          <div class="agent-info">
-            <h3>Yellow — Researcher &amp; Analyst</h3>
-            <div class="agent-role">Intelligence</div>
-            <p>Scans market data, analyses your current operations, and evaluates compliance posture. Delivers structured research briefs, competitor analyses, and data summaries. In evaluation mode, it produces KILL / PIVOT / SCALE recommendations with supporting evidence.</p>
-          </div>
-        </div>
-        <div class="pipeline-agent reveal reveal-delay-2">
-          <div class="pipeline-arrow">&#8595;</div>
-          <div class="agent-color orange">
-            <img src="assets/agent-designer.svg" alt="Designer" class="agent-avatar-svg">
-            Designer
-          </div>
-          <div class="agent-info">
-            <h3>Red-Orange — Designer</h3>
-            <div class="agent-role">Solutions &amp; Architecture</div>
-            <p>Turns research insights into actionable system designs. Creates wireframes, user flows, architecture documents, and detailed design specs. Ensures every solution is practical for a small business budget and timeline.</p>
-          </div>
-        </div>
-        <div class="pipeline-agent reveal reveal-delay-3">
-          <div class="pipeline-arrow">&#8595;</div>
-          <div class="agent-color blue">
-            <img src="assets/agent-maker.svg" alt="Maker" class="agent-avatar-svg">
-            Maker
-          </div>
-          <div class="agent-info">
-            <h3>Blue — Maker</h3>
-            <div class="agent-role">Building &amp; Deployment</div>
-            <p>Builds the actual systems: dashboards, analytics tools, AI models, and integrations. Writes production-ready code, runs tests, and handles deployment. Works strictly from the Designer's specifications.</p>
-          </div>
-        </div>
-        <div class="pipeline-agent reveal reveal-delay-4">
-          <div class="pipeline-arrow">&#8595;</div>
-          <div class="agent-color green">
-            <img src="assets/agent-marketer.svg" alt="Marketer" class="agent-avatar-svg">
-            Marketer
-          </div>
-          <div class="agent-info">
-            <h3>Green — Marketer</h3>
-            <div class="agent-role">Distribution &amp; Growth</div>
-            <p>Creates launch campaigns, email sequences, social media assets, and growth strategies. Ensures your AI-powered insights translate into real customer engagement and revenue.</p>
-          </div>
-        </div>
-        <div class="pipeline-agent reveal reveal-delay-5">
-          <div class="agent-color purple">
-            <img src="assets/agent-manager.svg" alt="Manager" class="agent-avatar-svg">
-            Manager
-          </div>
-          <div class="agent-info">
-            <h3>Purple — Manager (The Octopus)</h3>
-            <div class="agent-role">Orchestration</div>
-            <p>The central nervous system. Decomposes your goals into tasks, dispatches the right agents, enforces quality gates between stages, and synthesises outputs into a coherent strategy you can act on.</p>
-          </div>
-        </div>
-      </div>
+<section class="section" style="background:var(--surface);padding-top:60px;padding-bottom:60px;">
+  <div class="container">
+    <div class="cta-banner reveal" style="background:linear-gradient(135deg,var(--accent2),var(--accent));">
+      <h2>Ready to meet your AI team?</h2>
+      <p>Get started free and see what five AI agents can do for your F&B business.</p>
+      <a href="contact.html" class="btn">Start Free Trial &rarr;</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section section-alt">
-    <div class="container">
-      <div class="reveal">
-        <span class="section-label">Sample Output</span>
-        <div class="section-divider"></div>
-        <h2 class="section-title">What a RouteForge roadmap looks like</h2>
-        <p class="section-subtitle">Here's a real example of the structured plan our agents produce for an F&B business.</p>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-text"><span style="color:var(--accent);">R</span>oute<span style="color:var(--accent);font-weight:700;">Forge</span> AI</div>
+        <p>AI-powered intelligence for the food &amp; beverage industry.</p>
       </div>
-      <div class="roadmap-preview reveal">
-        <h4>&#128203; AI Adoption Roadmap &mdash; The Copper Kettle Cafe</h4>
-        <div class="roadmap-steps">
-          <div class="roadmap-step reveal reveal-delay-1">
-            <span class="step-tag">Phase 1</span>
-            <p><strong>Audit:</strong> Analysed 14 months of sales data, identified 6 high-waste menu items, mapped customer segments.</p>
-          </div>
-          <div class="roadmap-step reveal reveal-delay-2">
-            <span class="step-tag">Phase 2</span>
-            <p><strong>Strategy:</strong> Recommended dynamic pricing engine, loyalty AI, and predictive inventory system. Estimated 22% waste reduction.</p>
-          </div>
-          <div class="roadmap-step reveal reveal-delay-3">
-            <span class="step-tag">Phase 3</span>
-            <p><strong>Build:</strong> Deployed customer analytics dashboard and automated weekly report for management.</p>
-          </div>
-          <div class="roadmap-step reveal reveal-delay-4">
-            <span class="step-tag">Phase 4</span>
-            <p><strong>Launch:</strong> AI-powered email campaign to re-engage lapsed customers generated 18% return rate in first month.</p>
-          </div>
-          <div class="roadmap-step reveal reveal-delay-5">
-            <span class="step-tag">Phase 5</span>
-            <p><strong>Evaluate:</strong> 30-day metrics show 15% reduction in food waste, 12% increase in repeat customers. EU AI Act compliance confirmed.</p>
-          </div>
-        </div>
-      </div>
+      <div><h4>Product</h4><ul class="footer-links"><li><a href="how-it-works.html">How It Works</a></li><li><a href="use-cases.html">Use Cases</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li></ul></div>
+      <div><h4>Legal</h4><ul class="footer-links"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul></div>
     </div>
-  </section>
+    <div class="footer-bottom"><p>&copy; 2026 RouteForge AI.</p><div class="footer-bottom-links"><a href="https://github.com/chrisgomes1211/routeforgeai-website" target="_blank">GitHub</a><a href="sitemap.xml">Sitemap</a></div></div>
+  </div>
+</footer>
 
-  <section class="section">
-    <div class="container">
-      <div class="reveal">
-        <span class="section-label">Orchestration Modes</span>
-        <div class="section-divider"></div>
-        <h2 class="section-title">Flexible patterns for any workflow</h2>
-        <p class="section-subtitle">RouteForge AI adapts to your needs with three powerful orchestration patterns.</p>
-      </div>
-      <div class="sustain-grid">
-        <div class="sustain-card reveal reveal-delay-1 shine">
-          <div class="sustain-icon">&#128373;</div>
-          <h3>Sequential Pipeline</h3>
-          <p>Each agent passes its output to the next. Perfect for end-to-end projects where each phase depends on the last. Research &rarr; Design &rarr; Build &rarr; Market.</p>
-        </div>
-        <div class="sustain-card reveal reveal-delay-2 shine">
-          <div class="sustain-icon">&#128101;</div>
-          <h3>Parallel Fan-Out</h3>
-          <p>Multiple agents work simultaneously. Research runs competitor analysis while Designer prototypes a solution. Speed without sacrificing quality.</p>
-        </div>
-        <div class="sustain-card reveal reveal-delay-3 shine">
-          <div class="sustain-icon">&#128260;</div>
-          <h3>Review Loop</h3>
-          <p>Iterative refinement between agents. Maker builds, Designer reviews, Maker revises. Repeat until every quality gate passes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<button class="back-to-top" id="backToTop">&uarr;</button>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="nav-logo">
-            <span class="nav-logo-icon">R</span>
-            RouteForge AI
-          </a>
-          <p>AI-powered advisory for Food &amp; Beverage SMEs in Dublin. Built by students at the National College of Ireland.</p>
-        </div>
-        <div>
-          <h4>Pages</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="how-it-works.html">How It Works</a></li>
-            <li><a href="use-cases.html">Use Cases</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Resources</h4>
-          <ul class="footer-links">
-            <li><a href="https://fb-ai-advisor.lovable.app/" target="_blank">Live Demo</a></li>
-            <li><a href="https://github.com/chrisgomes1211/routeforgeai-website" target="_blank">GitHub</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Connect</h4>
-          <ul class="footer-links">
-            <li><a href="contact.html">Get in Touch</a></li>
-            <li><a href="https://www.ncirl.ie/" target="_blank">NCI</a></li>
-            <li><a href="https://www.linkedin.com/school/national-college-of-ireland/" target="_blank">LinkedIn</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 RouteForge AI &mdash; National College of Ireland</span>
-        <div class="footer-bottom-links">
-          <a href="https://fb-ai-advisor.lovable.app/" target="_blank">Live Demo</a>
-          <a href="https://www.ncirl.ie/" target="_blank">NCI</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
-
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('open');
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('open');
-      });
-    });
-
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) nav.classList.add('scrolled');
-      else nav.classList.remove('scrolled');
-    });
-
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 500) backToTop.classList.add('visible');
-      else backToTop.classList.remove('visible');
-    });
-    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
-      revealObserver.observe(el);
-    });
-  </script>
+<script>
+(function() {
+  var b = document.getElementById('burger'), nl = document.getElementById('navLinks');
+  if (b) { b.addEventListener('click', function() { b.classList.toggle('open'); nl.classList.toggle('open'); }); nl.querySelectorAll('a').forEach(function(l) { l.addEventListener('click', function() { b.classList.remove('open'); nl.classList.remove('open'); }); }); }
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function() { nav.classList.toggle('scrolled', window.scrollY > 50); });
+  var bt = document.getElementById('backToTop');
+  window.addEventListener('scroll', function() { bt.classList.toggle('visible', window.scrollY > 500); });
+  bt.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  var ro = new IntersectionObserver(function(e) { e.forEach(function(en) { if (en.isIntersecting) { en.target.classList.add('visible'); } }); }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(function(el) { ro.observe(el); });
+})();
+</script>
 </body>
 </html>
