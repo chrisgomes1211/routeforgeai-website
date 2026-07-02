@@ -31,6 +31,15 @@
 
 <section class="hero">
   <div class="hero-grid" data-speed="0.05"></div>
+  <div class="hero-bg-image"></div>
+  <div class="hero-particles">
+    <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+    <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+    <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+    <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+    <div class="hero-particle"></div><div class="hero-particle"></div><div class="hero-particle"></div>
+    <div class="hero-particle"></div>
+  </div>
   <div class="hero-shapes">
     <div class="hero-shape hero-shape-1" data-speed="0.08"></div>
     <div class="hero-shape hero-shape-2" data-speed="0.1"></div>
@@ -117,7 +126,7 @@
       <div class="flip-card reveal">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <div class="flip-icon">📊</div>
+            <div class="flip-icon"><img src="assets/icons/assess.svg" alt="Assess" class="flaticon-icon"></div>
             <h3>Assess</h3>
             <p>Connect your POS, schedules, and inventory. We analyse historical patterns in minutes.</p>
           </div>
@@ -131,7 +140,7 @@
       <div class="flip-card reveal">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <div class="flip-icon">⚙️</div>
+            <div class="flip-icon"><img src="assets/icons/build.svg" alt="Build" class="flaticon-icon"></div>
             <h3>Build</h3>
             <p>AI generates demand forecasts, optimal schedules, and smart inventory plans.</p>
           </div>
@@ -145,7 +154,7 @@
       <div class="flip-card reveal">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <div class="flip-icon">📈</div>
+            <div class="flip-icon"><img src="assets/icons/grow.svg" alt="Grow" class="flaticon-icon"></div>
             <h3>Grow</h3>
             <p>Real-time insights, automated alerts, and recommendations that improve daily.</p>
           </div>
@@ -169,18 +178,33 @@
     <div class="testimonials-grid">
       <div class="testimonial-card reveal">
         <div class="testimonial-quote">"RouteForge helped us cut food waste by 22% in the first month. The demand forecasts are scarily accurate — within 5% most days."</div>
-        <div class="testimonial-author">Sarah Chen</div>
-        <div class="testimonial-role">Owner, The Daily Grind Cafe</div>
+        <div class="testimonial-author-row">
+          <div class="testimonial-photo"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80&fit=crop&crop=face" alt="Sarah Chen" loading="lazy"></div>
+          <div class="testimonial-author-info">
+            <div class="testimonial-author">Sarah Chen</div>
+            <div class="testimonial-role">Owner, The Daily Grind Cafe</div>
+          </div>
+        </div>
       </div>
       <div class="testimonial-card reveal">
         <div class="testimonial-quote">"Staff scheduling used to take me 3 hours every week. Now it's automated and actually matches our busy periods better than I ever could."</div>
-        <div class="testimonial-author">James O'Brien</div>
-        <div class="testimonial-role">GM, The Bistro Dublin</div>
+        <div class="testimonial-author-row">
+          <div class="testimonial-photo"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&fit=crop&crop=face" alt="James O'Brien" loading="lazy"></div>
+          <div class="testimonial-author-info">
+            <div class="testimonial-author">James O'Brien</div>
+            <div class="testimonial-role">GM, The Bistro Dublin</div>
+          </div>
+        </div>
       </div>
       <div class="testimonial-card reveal">
         <div class="testimonial-quote">"The dashboard gives me a real-time pulse on the business. I can see revenue projections, waste trends, and staff efficiency all in one place."</div>
-        <div class="testimonial-author">Maria Torres</div>
-        <div class="testimonial-role">Operations Director, La Cucina Group</div>
+        <div class="testimonial-author-row">
+          <div class="testimonial-photo"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80&fit=crop&crop=face" alt="Maria Torres" loading="lazy"></div>
+          <div class="testimonial-author-info">
+            <div class="testimonial-author">Maria Torres</div>
+            <div class="testimonial-role">Operations Director, La Cucina Group</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -320,6 +344,8 @@
       <div class="footer-bottom-links">
         <a href="https://github.com/chrisgomes1211/routeforgeai-website" target="_blank">GitHub</a>
         <a href="sitemap.xml">Sitemap</a>
+        <a href="https://www.flaticon.com" target="_blank">Icons by Flaticon</a>
+        <a href="https://unsplash.com" target="_blank">Photos by Unsplash</a>
       </div>
     </div>
   </div>
@@ -407,6 +433,19 @@
       item.classList.toggle('open');
     });
   });
+
+  if (!('ontouchstart' in window)) {
+    var dot = document.createElement('div'); dot.className = 'custom-cursor-dot';
+    var ring = document.createElement('div'); ring.className = 'custom-cursor-ring';
+    document.body.appendChild(dot); document.body.appendChild(ring);
+    var mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', function(e) { mx = e.clientX; my = e.clientY; dot.style.left = mx + 'px'; dot.style.top = my + 'px'; });
+    var hoverEls = 'a, button, .flip-card, .usecase-flip-card, .agent-flip-card, .team-flip-card, .pricing-card, .faq-item';
+    document.addEventListener('mouseover', function(e) { var t = e.target.closest(hoverEls); if (t) ring.classList.add('hover'); });
+    document.addEventListener('mouseout', function(e) { var t = e.target.closest(hoverEls); if (t) ring.classList.remove('hover'); });
+    function animateRing() { rx += (mx - rx) * 0.15; ry += (my - ry) * 0.15; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(animateRing); }
+    animateRing();
+  }
 })();
 </script>
 </body>

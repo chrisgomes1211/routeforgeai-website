@@ -38,7 +38,8 @@
       <div class="usecase-flip-card reveal">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <div class="usecase-icon">☕</div>
+            <div class="usecase-image-strip"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy"></div>
+            <div class="usecase-icon"><img src="assets/icons/cafe.svg" alt="Cafe" class="flaticon-icon"></div>
             <div class="usecase-label">Cafes &amp; Coffee Shops</div>
             <h3 style="font-size:1.1rem;">Peak-hour precision</h3>
             <p style="font-size:0.85rem;">Predict daily foot traffic within 5% accuracy</p>
@@ -52,7 +53,8 @@
       <div class="usecase-flip-card reveal">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <div class="usecase-icon">🍽️</div>
+            <div class="usecase-image-strip"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy"></div>
+            <div class="usecase-icon"><img src="assets/icons/restaurant.svg" alt="Restaurant" class="flaticon-icon"></div>
             <div class="usecase-label">Restaurants</div>
             <h3 style="font-size:1.1rem;">Full-service intelligence</h3>
             <p style="font-size:0.85rem;">From front-of-house to kitchen</p>
@@ -66,7 +68,8 @@
       <div class="usecase-flip-card reveal">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <div class="usecase-icon">🥡</div>
+            <div class="usecase-image-strip"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy"></div>
+            <div class="usecase-icon"><img src="assets/icons/ghost-kitchen.svg" alt="Ghost Kitchen" class="flaticon-icon"></div>
             <div class="usecase-label">Ghost Kitchens</div>
             <h3 style="font-size:1.1rem;">Delivery-optimised</h3>
             <p style="font-size:0.85rem;">Match supply with on-demand spikes</p>
@@ -80,7 +83,8 @@
       <div class="usecase-flip-card reveal">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <div class="usecase-icon">🏨</div>
+            <div class="usecase-image-strip"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy"></div>
+            <div class="usecase-icon"><img src="assets/icons/hotel.svg" alt="Hotel" class="flaticon-icon"></div>
             <div class="usecase-label">Hotels &amp; Resorts</div>
             <h3 style="font-size:1.1rem;">Multi-outlet orchestration</h3>
             <p style="font-size:0.85rem;">Coordinate across restaurants, bars, and room service</p>
@@ -94,7 +98,8 @@
       <div class="usecase-flip-card reveal">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <div class="usecase-icon">🎪</div>
+            <div class="usecase-image-strip"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy"></div>
+            <div class="usecase-icon"><img src="assets/icons/catering.svg" alt="Catering" class="flaticon-icon"></div>
             <div class="usecase-label">Catering &amp; Events</div>
             <h3 style="font-size:1.1rem;">Volume intelligence</h3>
             <p style="font-size:0.85rem;">Scale up without waste</p>
@@ -108,7 +113,8 @@
       <div class="usecase-flip-card reveal">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <div class="usecase-icon">🛒</div>
+            <div class="usecase-image-strip"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=400&q=80&auto=format&fit=crop" alt="" loading="lazy"></div>
+            <div class="usecase-icon"><img src="assets/icons/retail.svg" alt="Food Retail" class="flaticon-icon"></div>
             <div class="usecase-label">Food Retail</div>
             <h3 style="font-size:1.1rem;">Fresh &amp; fast</h3>
             <p style="font-size:0.85rem;">Minimise spoilage, maximise turns</p>
@@ -134,7 +140,7 @@
       <div><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li></ul></div>
       <div><h4>Legal</h4><ul class="footer-links"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><p>&copy; 2026 RouteForge AI.</p><div class="footer-bottom-links"><a href="https://github.com/chrisgomes1211/routeforgeai-website" target="_blank">GitHub</a><a href="sitemap.xml">Sitemap</a></div></div>
+    <div class="footer-bottom"><p>&copy; 2026 RouteForge AI.</p><div class="footer-bottom-links"><a href="https://github.com/chrisgomes1211/routeforgeai-website" target="_blank">GitHub</a><a href="sitemap.xml">Sitemap</a><a href="https://www.flaticon.com" target="_blank">Icons by Flaticon</a><a href="https://unsplash.com" target="_blank">Photos by Unsplash</a></div></div>
   </div>
 </footer>
 
@@ -151,6 +157,19 @@
   bt.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
   var ro = new IntersectionObserver(function(e) { e.forEach(function(en) { if (en.isIntersecting) { en.target.classList.add('visible'); } }); }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(function(el) { ro.observe(el); });
+
+  if (!('ontouchstart' in window)) {
+    var dot = document.createElement('div'); dot.className = 'custom-cursor-dot';
+    var ring = document.createElement('div'); ring.className = 'custom-cursor-ring';
+    document.body.appendChild(dot); document.body.appendChild(ring);
+    var mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', function(e) { mx = e.clientX; my = e.clientY; dot.style.left = mx + 'px'; dot.style.top = my + 'px'; });
+    var hoverEls = 'a, button, .flip-card, .usecase-flip-card, .agent-flip-card, .team-flip-card, .pricing-card, .faq-item';
+    document.addEventListener('mouseover', function(e) { var t = e.target.closest(hoverEls); if (t) ring.classList.add('hover'); });
+    document.addEventListener('mouseout', function(e) { var t = e.target.closest(hoverEls); if (t) ring.classList.remove('hover'); });
+    function animateRing() { rx += (mx - rx) * 0.15; ry += (my - ry) * 0.15; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(animateRing); }
+    animateRing();
+  }
 })();
 </script>
 </body>
