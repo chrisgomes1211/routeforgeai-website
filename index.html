@@ -43,11 +43,14 @@
   <div class="hero-shapes">
     <div class="hero-shape hero-shape-1" data-speed="0.08"></div>
     <div class="hero-shape hero-shape-2" data-speed="0.1"></div>
+    <div class="memphis-shape memphis-circle" style="top:60%;right:8%;width:60px;height:60px;border-color:var(--memphis-teal);opacity:0.06;"></div>
+    <div class="memphis-shape memphis-triangle" style="bottom:15%;left:12%;"></div>
   </div>
   <div class="container">
     <div class="hero-content">
       <div class="hero-text" data-speed="0.3">
         <div class="hero-badge">Now in Beta</div>
+        <div class="squiggle-line" style="margin:0 0 12px;max-width:80px;"></div>
         <h1>AI built for your<br><span class="gradient-text">F&B Business</span></h1>
         <p>Connect your sales, inventory, and staffing data. Get AI-powered demand forecasts, reduce waste, and optimise labour — all from one intelligent dashboard.</p>
         <div class="hero-actions">
@@ -105,6 +108,8 @@
 </section>
 
 <section class="stats-strip reveal">
+  <div class="pattern-dots"></div>
+  <div class="memphis-shape memphis-circle" style="position:absolute;top:-30px;right:10%;width:100px;height:100px;border-color:var(--memphis-yellow);opacity:0.06;z-index:0;pointer-events:none;"></div>
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item"><div class="stat-number" data-count="10000">0</div><div class="stat-label">Meals Forecasted Daily</div></div>
@@ -115,7 +120,12 @@
   </div>
 </section>
 
-<section class="section" id="benefits">
+<section class="section section-memphis" id="benefits">
+  <div class="memphis-shapes">
+    <div class="memphis-shape memphis-circle memphis-float" style="top:15%;left:-30px;width:70px;height:70px;border-color:var(--memphis-pink);opacity:0.06;"></div>
+    <div class="memphis-shape memphis-rect memphis-float-delayed" style="bottom:20%;right:5%;width:50px;height:50px;border-color:var(--memphis-yellow);"></div>
+    <div class="memphis-shape memphis-dot" style="top:40%;right:15%;width:16px;height:16px;background:var(--memphis-teal);opacity:0.07;"></div>
+  </div>
   <div class="container">
     <div class="section-header reveal">
       <div class="section-label">How It Works</div>
@@ -125,7 +135,7 @@
     <div class="flip-card-row">
       <div class="flip-card reveal">
         <div class="flip-card-inner">
-          <div class="flip-card-front">
+          <div class="flip-card-front" style="border-top:4px solid var(--memphis-pink);">
             <div class="flip-icon"><img src="assets/icons/assess.svg" alt="Assess" class="flaticon-icon"></div>
             <h3>Assess</h3>
             <p>Connect your POS, schedules, and inventory. We analyse historical patterns in minutes.</p>
@@ -139,7 +149,7 @@
       </div>
       <div class="flip-card reveal">
         <div class="flip-card-inner">
-          <div class="flip-card-front">
+          <div class="flip-card-front" style="border-top:4px solid var(--memphis-teal);">
             <div class="flip-icon"><img src="assets/icons/build.svg" alt="Build" class="flaticon-icon"></div>
             <h3>Build</h3>
             <p>AI generates demand forecasts, optimal schedules, and smart inventory plans.</p>
@@ -153,7 +163,7 @@
       </div>
       <div class="flip-card reveal">
         <div class="flip-card-inner">
-          <div class="flip-card-front">
+          <div class="flip-card-front" style="border-top:4px solid var(--memphis-yellow);">
             <div class="flip-icon"><img src="assets/icons/grow.svg" alt="Grow" class="flaticon-icon"></div>
             <h3>Grow</h3>
             <p>Real-time insights, automated alerts, and recommendations that improve daily.</p>
@@ -169,14 +179,19 @@
   </div>
 </section>
 
-<section class="section" style="background:var(--surface);">
+<section class="section section-memphis" style="background:var(--surface);">
+  <div class="pattern-dots-teal"></div>
+  <div class="memphis-shapes">
+    <div class="memphis-shape memphis-triangle memphis-float" style="top:20%;right:6%;"></div>
+    <div class="memphis-shape memphis-circle memphis-float-delayed" style="bottom:15%;left:4%;width:50px;height:50px;border-color:var(--memphis-pink);opacity:0.05;"></div>
+  </div>
   <div class="container">
     <div class="section-header reveal">
       <div class="section-label">Testimonials</div>
       <h2 class="section-title">Trusted by F&B<br>Operators Like You</h2>
     </div>
     <div class="testimonials-grid">
-      <div class="testimonial-card reveal">
+      <div class="testimonial-card reveal" style="border-top:4px solid var(--memphis-pink);">
         <div class="testimonial-quote">"RouteForge helped us cut food waste by 22% in the first month. The demand forecasts are scarily accurate — within 5% most days."</div>
         <div class="testimonial-author-row">
           <div class="testimonial-photo"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80&fit=crop&crop=face" alt="Sarah Chen" loading="lazy"></div>
@@ -186,7 +201,7 @@
           </div>
         </div>
       </div>
-      <div class="testimonial-card reveal">
+      <div class="testimonial-card reveal" style="border-top:4px solid var(--memphis-teal);">
         <div class="testimonial-quote">"Staff scheduling used to take me 3 hours every week. Now it's automated and actually matches our busy periods better than I ever could."</div>
         <div class="testimonial-author-row">
           <div class="testimonial-photo"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&fit=crop&crop=face" alt="James O'Brien" loading="lazy"></div>
@@ -196,7 +211,7 @@
           </div>
         </div>
       </div>
-      <div class="testimonial-card reveal">
+      <div class="testimonial-card reveal" style="border-top:4px solid var(--memphis-yellow);">
         <div class="testimonial-quote">"The dashboard gives me a real-time pulse on the business. I can see revenue projections, waste trends, and staff efficiency all in one place."</div>
         <div class="testimonial-author-row">
           <div class="testimonial-photo"><img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80&fit=crop&crop=face" alt="Maria Torres" loading="lazy"></div>
@@ -210,7 +225,13 @@
   </div>
 </section>
 
-<section class="section" id="pricing">
+<div class="section-divider-zigzag"></div>
+
+<section class="section section-memphis" id="pricing">
+  <div class="memphis-shapes">
+    <div class="memphis-shape memphis-rect memphis-float" style="top:10%;left:4%;width:40px;height:40px;border-color:var(--memphis-pink);"></div>
+    <div class="memphis-shape memphis-dot" style="top:60%;right:10%;width:14px;height:14px;background:var(--memphis-yellow);opacity:0.08;"></div>
+  </div>
   <div class="container">
     <div class="section-header reveal">
       <div class="section-label">Pricing</div>
@@ -218,7 +239,7 @@
       <p class="section-subtitle">No hidden fees. No long-term contracts. Cancel anytime.</p>
     </div>
     <div class="pricing-grid">
-      <div class="pricing-card reveal">
+      <div class="pricing-card reveal" style="border-top:4px solid var(--memphis-teal);">
         <div class="pricing-name">Starter</div>
         <div class="pricing-desc">For small cafes testing the waters</div>
         <div class="pricing-amount"><span class="currency">€</span>0</div>
@@ -247,7 +268,7 @@
         </ul>
         <a href="contact.html" class="btn btn-primary">Start Free Trial</a>
       </div>
-      <div class="pricing-card reveal">
+      <div class="pricing-card reveal" style="border-top:4px solid var(--memphis-pink);">
         <div class="pricing-name">Enterprise</div>
         <div class="pricing-desc">For multi-location operators</div>
         <div class="pricing-amount"><span class="currency">€</span>Custom</div>
@@ -266,7 +287,12 @@
   </div>
 </section>
 
-<section class="section" id="faq">
+<div class="section-divider-zigzag-alt"></div>
+
+<section class="section section-memphis" id="faq">
+  <div class="memphis-shapes">
+    <div class="memphis-shape memphis-circle memphis-float-delayed" style="top:25%;right:3%;width:45px;height:45px;border-color:var(--memphis-teal);opacity:0.05;"></div>
+  </div>
   <div class="container">
     <div class="section-header reveal">
       <div class="section-label">FAQ</div>
@@ -297,7 +323,12 @@
   </div>
 </section>
 
-<section class="section" style="padding-bottom:0;">
+<div class="section-divider-zigzag"></div>
+
+<section class="section section-memphis" style="padding-bottom:0;">
+  <div class="memphis-shapes">
+    <div class="memphis-shape memphis-circle" style="top:10%;left:20%;width:80px;height:80px;border-color:var(--memphis-yellow);opacity:0.04;"></div>
+  </div>
   <div class="container">
     <div class="cta-banner reveal">
       <h2>Ready to transform your F&B business?</h2>

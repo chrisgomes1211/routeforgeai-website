@@ -9,11 +9,18 @@
   --accent-glow: rgba(99, 102, 241, 0.1);
   --accent2: #8b5cf6;
   --accent3: #f59e0b;
+  --memphis-pink: #ec4899;
+  --memphis-yellow: #facc15;
+  --memphis-teal: #2dd4bf;
+  --memphis-orange: #fb923c;
+  --memphis-lavender: #a78bfa;
+  --memphis-grid: 30px;
   --border: #e7e5e4;
   --border-light: #f0eeeb;
   --shadow: 0 4px 24px rgba(0,0,0,0.06);
   --shadow-lg: 0 12px 48px rgba(0,0,0,0.08);
   --font: 'Inter', sans-serif;
+  --font-display: 'Inter', sans-serif;
   --nav-height: 72px;
   --radius: 12px;
   --radius-lg: 20px;
@@ -129,10 +136,14 @@ a:hover { color: var(--accent-hover); }
 .pulse-dot.offline { background: var(--text-dim); }
 
 /* Stats Strip */
-.stats-strip { background: var(--surface); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); padding: 48px 0; }
-.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+.stats-strip { background: var(--surface); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); padding: 48px 0; position: relative; overflow: hidden; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; position: relative; z-index: 1; }
 .stat-item { }
 .stat-number { font-size: 2.5rem; font-weight: 800; color: var(--accent); line-height: 1; margin-bottom: 6px; }
+.stat-item:nth-child(1) .stat-number { color: var(--memphis-pink); }
+.stat-item:nth-child(2) .stat-number { color: var(--memphis-teal); }
+.stat-item:nth-child(3) .stat-number { color: var(--accent); }
+.stat-item:nth-child(4) .stat-number { color: var(--memphis-yellow); }
 .stat-label { font-size: 0.9rem; color: var(--text-muted); }
 
 /* Flip Cards Base */
@@ -231,7 +242,12 @@ a:hover { color: var(--accent-hover); }
 .faq-list { max-width: 700px; margin: 0 auto; }
 .faq-item { padding: 20px 0; border-bottom: 1px solid var(--border-light); cursor: pointer; }
 .faq-question { display: flex; justify-content: space-between; align-items: center; font-weight: 600; font-size: 1rem; gap: 16px; }
-.faq-icon { font-size: 1.2rem; color: var(--accent); transition: transform var(--transition); flex-shrink: 0; }
+.faq-icon { font-size: 1.2rem; transition: transform var(--transition); flex-shrink: 0; }
+.faq-item:nth-child(1) .faq-icon { color: var(--memphis-pink); }
+.faq-item:nth-child(2) .faq-icon { color: var(--memphis-teal); }
+.faq-item:nth-child(3) .faq-icon { color: var(--accent); }
+.faq-item:nth-child(4) .faq-icon { color: var(--memphis-yellow); }
+.faq-item:nth-child(5) .faq-icon { color: var(--memphis-orange); }
 .faq-item.open .faq-icon { transform: rotate(45deg); }
 .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding-top: 0; }
 .faq-item.open .faq-answer { max-height: 300px; padding-top: 16px; }
@@ -303,6 +319,55 @@ a:hover { color: var(--accent-hover); }
 /* Section Divider */
 .section-divider { height: 60px; background: linear-gradient(to bottom, var(--bg), var(--surface)); clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%); margin-top: -60px; position: relative; z-index: 1; }
 .section-divider-alt { height: 60px; background: linear-gradient(to bottom, var(--surface), var(--bg)); clip-path: polygon(0 60%, 100% 0, 100% 100%, 0 100%); }
+
+/* Memphis Decorative Shapes */
+.memphis-shapes { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.memphis-shape { position: absolute; opacity: 0.08; }
+.memphis-circle { border-radius: 50%; border: 3px solid var(--memphis-pink); width: 80px; height: 80px; }
+.memphis-dot { border-radius: 50%; width: 12px; height: 12px; }
+.memphis-triangle { width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-bottom: 34px solid var(--memphis-yellow); opacity: 0.1; }
+.memphis-squiggle { width: 120px; height: 24px; }
+.memphis-squiggle svg { width: 100%; height: 100%; display: block; }
+.memphis-rect { border: 3px solid var(--memphis-teal); width: 60px; height: 60px; transform: rotate(15deg); opacity: 0.07; border-radius: 4px; }
+
+/* Colored accent borders on cards */
+.card-border-pink { border-color: var(--memphis-pink) !important; }
+.card-border-teal { border-color: var(--memphis-teal) !important; }
+.card-border-yellow { border-color: var(--memphis-yellow) !important; }
+.card-border-orange { border-color: var(--memphis-orange) !important; }
+.card-border-lavender { border-color: var(--memphis-lavender) !important; }
+
+.card-top-pink { border-top: 4px solid var(--memphis-pink) !important; }
+.card-top-teal { border-top: 4px solid var(--memphis-teal) !important; }
+.card-top-yellow { border-top: 4px solid var(--memphis-yellow) !important; }
+.card-top-orange { border-top: 4px solid var(--memphis-orange) !important; }
+
+/* Dot grid pattern overlay */
+.pattern-dots { background-image: radial-gradient(circle, var(--memphis-pink) 1px, transparent 1px); background-size: 20px 20px; opacity: 0.06; position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.pattern-dots-teal { background-image: radial-gradient(circle, var(--memphis-teal) 1px, transparent 1px); background-size: 20px 20px; opacity: 0.06; position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.pattern-dots-yellow { background-image: radial-gradient(circle, var(--memphis-yellow) 1px, transparent 1px); background-size: 20px 20px; opacity: 0.06; position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+
+/* Section with relative positioning for Memphis shapes */
+.section-memphis { position: relative; }
+.section-memphis > .container { position: relative; z-index: 1; }
+
+/* Squiggle SVG data-uri as background */
+.squiggle-line { height: 16px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 16'%3E%3Cpath d='M0 8 Q15 0 30 8 T60 8 T90 8 T120 8' stroke='%23ec4899' stroke-width='2.5' fill='none' opacity='0.15'/%3E%3C/svg%3E") repeat-x; margin: 0 auto; max-width: 200px; }
+.squiggle-line-teal { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 16'%3E%3Cpath d='M0 8 Q15 0 30 8 T60 8 T90 8 T120 8' stroke='%232dd4bf' stroke-width='2.5' fill='none' opacity='0.15'/%3E%3C/svg%3E") repeat-x; }
+
+/* Memphis zig-zag section divider */
+.section-divider-zigzag { height: 40px; background: linear-gradient(to bottom, var(--bg), var(--surface)); clip-path: polygon(0 0, 6.25% 100%, 12.5% 0, 18.75% 100%, 25% 0, 31.25% 100%, 37.5% 0, 43.75% 100%, 50% 0, 56.25% 100%, 62.5% 0, 68.75% 100%, 75% 0, 81.25% 100%, 87.5% 0, 93.75% 100%, 100% 0, 100% 100%, 0 100%); margin-top: -40px; position: relative; z-index: 1; }
+.section-divider-zigzag-alt { height: 40px; background: linear-gradient(to bottom, var(--surface), var(--bg)); clip-path: polygon(0 100%, 6.25% 0, 12.5% 100%, 18.75% 0, 25% 100%, 31.25% 0, 37.5% 100%, 43.75% 0, 50% 100%, 56.25% 0, 62.5% 100%, 68.75% 0, 75% 100%, 81.25% 0, 87.5% 100%, 93.75% 0, 100% 100%, 100% 0, 0 0); margin-top: -40px; position: relative; z-index: 1; }
+
+/* Memphis accent text colors */
+.text-pink { color: var(--memphis-pink) !important; }
+.text-teal { color: var(--memphis-teal) !important; }
+.text-yellow { color: var(--memphis-yellow) !important; }
+
+/* Floating Memphis shapes rotation keyframe */
+@keyframes memphisFloat { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(8deg); } }
+.memphis-float { animation: memphisFloat 6s ease-in-out infinite; }
+.memphis-float-delayed { animation: memphisFloat 8s ease-in-out infinite reverse; }
 
 /* Animations */
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-30px); } }

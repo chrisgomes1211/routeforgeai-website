@@ -26,6 +26,10 @@
 
 <section class="page-header">
   <div class="page-header-bg"></div>
+  <div class="memphis-shapes">
+    <div class="memphis-shape memphis-circle memphis-float" style="bottom:15%;right:8%;width:60px;height:60px;border-color:var(--memphis-pink);opacity:0.05;"></div>
+    <div class="memphis-shape memphis-rect" style="top:25%;left:5%;width:40px;height:40px;border-color:var(--memphis-teal);"></div>
+  </div>
   <div class="container">
     <div class="section-label reveal">Contact</div>
     <h1 class="reveal">Let's Build Something<br><span style="background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Intelligent Together</span></h1>
@@ -33,10 +37,13 @@
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
+<div class="section-divider-zigzag" style="background:linear-gradient(to bottom,var(--bg),var(--surface));"></div>
+
+<section class="section section-memphis" style="padding-top:0;background:var(--surface);">
+  <div class="pattern-dots"></div>
   <div class="container">
     <div class="contact-grid">
-      <div class="form-card reveal">
+      <div class="form-card reveal card-top-teal" style="border-top:4px solid var(--memphis-teal);">
         <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:24px;">Send us a message</h3>
         <form id="contactForm">
           <div class="form-group">
@@ -66,7 +73,7 @@
         </form>
       </div>
       <div style="display:flex;flex-direction:column;gap:20px;">
-        <div class="contact-info-card reveal">
+        <div class="contact-info-card reveal card-top-pink" style="border-top:3px solid var(--memphis-pink);">
           <div class="icon-box"><img src="assets/icons/email.svg" alt="Email" class="flaticon-icon"></div>
           <div>
             <h4>Email</h4>
@@ -74,7 +81,7 @@
             <a href="mailto:hello@routeforge.ai" class="contact-link">hello@routeforge.ai</a>
           </div>
         </div>
-        <div class="contact-info-card reveal">
+        <div class="contact-info-card reveal" style="border-top:3px solid var(--memphis-teal);">
           <div class="icon-box"><img src="assets/icons/location.svg" alt="Location" class="flaticon-icon"></div>
           <div>
             <h4>Location</h4>
@@ -82,7 +89,7 @@
             <a href="https://maps.google.com" target="_blank" class="contact-link">View on map</a>
           </div>
         </div>
-        <div class="contact-info-card reveal">
+        <div class="contact-info-card reveal" style="border-top:3px solid var(--memphis-yellow);">
           <div class="icon-box"><img src="assets/icons/chat.svg" alt="Chat" class="flaticon-icon"></div>
           <div>
             <h4>Start Free Trial</h4>
@@ -90,7 +97,7 @@
             <a href="index.html#pricing" class="contact-link">See pricing &rarr;</a>
           </div>
         </div>
-        <div class="contact-info-card reveal">
+        <div class="contact-info-card reveal" style="border-top:3px solid var(--memphis-orange);">
           <div class="icon-box"><img src="assets/icons/github.svg" alt="GitHub" class="flaticon-icon"></div>
           <div>
             <h4>GitHub</h4>
