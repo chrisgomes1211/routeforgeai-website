@@ -194,19 +194,21 @@ a:hover { color: var(--accent-hover); }
 .agent-node:hover .node-glow { opacity: 0.4; }
 .node-pulse { animation: nodePulse 3s ease-in-out infinite; }
 @keyframes nodePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
-.agent-flip-card { perspective: 1000px; height: 200px; margin-bottom: 32px; position: relative; }
-.agent-flip-card .flip-card-inner { border-radius: var(--radius); }
+.agent-flip-card { perspective: 1000px; min-height: 200px; margin-bottom: 32px; margin-left: 48px; position: relative; }
+.agent-flip-card .flip-card-inner { border-radius: var(--radius); min-height: 200px; }
 .agent-flip-card .flip-card-front, 
-.agent-flip-card .flip-card-back { padding: 24px; flex-direction: row; gap: 20px; text-align: left; align-items: center; }
+.agent-flip-card .flip-card-back { padding: 20px 24px; flex-direction: row; gap: 16px; text-align: left; align-items: center; }
 .agent-flip-card .flip-card-front { background: var(--surface); border: 1px solid var(--border); box-shadow: var(--shadow); border-left: 4px solid var(--accent); }
 .agent-flip-card .flip-card-back { background: linear-gradient(135deg, var(--accent), var(--accent2)); border-left: 4px solid rgba(255,255,255,0.3); }
+
+/* Agent step number positioning */
+.agent-step { position: absolute; left: -74px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; z-index: 2; }
 
 /* Live Data Simulation Status */
 .agent-status { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; font-size: 0.78rem; color: var(--text-dim); }
 .agent-status-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
 .agent-status-dot.active { background: #10b981; animation: statusPulse 1.5s ease-in-out infinite; }
 .agent-status-dot.processing { background: var(--memphis-teal); animation: statusPulse 1.5s ease-in-out infinite 0.3s; }
-.agent-status-text { }
 @keyframes statusPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 .agent-step { position: absolute; left: -76px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; z-index: 2; }
 .agent-icon-box { width: 56px; height: 56px; flex-shrink: 0; }
@@ -426,9 +428,13 @@ a:hover { color: var(--accent-hover); }
   .page-header { padding: 120px 0 40px; }
   .page-header-bg { display: none; }
   .page-header h1 { font-size: 2.2rem; }
-  .agent-flip-card { height: 240px; }
-  .agent-step { left: -42px; width: 24px; height: 24px; font-size: 0.65rem; }
-  .agent-flow-line { left: 36px; }
+  .agent-flip-card { min-height: 240px; margin-left: 0; }
+  .agent-step { left: 8px; width: 24px; height: 24px; font-size: 0.65rem; }
+  .agent-flip-card .flip-card-front, .agent-flip-card .flip-card-back { flex-direction: column; padding: 16px; gap: 12px; text-align: center; }
+  .agent-flip-card .flip-card-front > div { text-align: center; }
+  .agent-flow-line { left: 20px; }
+  .agent-flow-particles { left: 20px; }
+  .agent-network { display: none; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .cta-banner { padding: 40px 24px; }
