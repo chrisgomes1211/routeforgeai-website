@@ -166,6 +166,10 @@ a:hover { color: var(--accent-hover); }
 .agent-flow { position: relative; max-width: 900px; margin: 0 auto; }
 .agent-flow-line { position: absolute; left: 60px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--accent), rgba(99,102,241,0.05)); }
 
+/* Agent Pipeline Background Image */
+.agent-pipeline-bg { position: absolute; inset: 0; z-index: 0; background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80&auto=format&fit=crop') center center / cover no-repeat; pointer-events: none; opacity: 0.4; }
+.agent-pipeline-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, var(--surface) 5%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.5) 60%, var(--surface) 95%); }
+
 /* Animated Pipeline Dots */
 .agent-flow-particles { position: absolute; left: 60px; top: 0; bottom: 0; width: 2px; z-index: 3; pointer-events: none; }
 .agent-flow-particle { position: absolute; width: 8px; height: 8px; border-radius: 50%; left: -3px; opacity: 0; }
