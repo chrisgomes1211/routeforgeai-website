@@ -47,8 +47,81 @@
     <div class="memphis-shape memphis-circle memphis-float" style="bottom:10%;left:3%;width:80px;height:80px;border-color:var(--memphis-yellow);opacity:0.04;"></div>
   </div>
   <div class="container">
+    <div class="agent-network reveal" id="agentNetwork">
+      <svg viewBox="0 0 750 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="g1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="var(--memphis-pink)"/><stop offset="100%" stop-color="var(--memphis-pink)" stop-opacity="0"/></radialGradient>
+          <radialGradient id="g2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="var(--memphis-teal)"/><stop offset="100%" stop-color="var(--memphis-teal)" stop-opacity="0"/></radialGradient>
+          <radialGradient id="g3" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="var(--memphis-yellow)"/><stop offset="100%" stop-color="var(--memphis-yellow)" stop-opacity="0"/></radialGradient>
+          <radialGradient id="g4" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="var(--memphis-orange)"/><stop offset="100%" stop-color="var(--memphis-orange)" stop-opacity="0"/></radialGradient>
+          <radialGradient id="g5" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="var(--memphis-lavender)"/><stop offset="100%" stop-color="var(--memphis-lavender)" stop-opacity="0"/></radialGradient>
+        </defs>
+
+        <!-- Arrows -->
+        <path d="M115 100 L230 68" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow" marker-end="url(#arrow)"/>
+        <path d="M230 132 L115 120" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
+        <path d="M230 68 L345 100" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
+        <path d="M345 120 L230 132" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
+        <path d="M345 100 L460 68" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
+        <path d="M460 132 L345 120" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
+        <path d="M460 68 L575 100" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
+        <path d="M575 120 L460 132" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
+        <path d="M345 20 L345 100" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
+
+        <!-- Node 1: Researcher -->
+        <g class="agent-node" data-agent="0" style="cursor:pointer;">
+          <circle cx="115" cy="110" r="42" class="node-glow" fill="url(#g1)"/>
+          <circle cx="115" cy="110" r="32" class="node-bg" fill="var(--bg)" fill-opacity="0.8" stroke="var(--memphis-pink)" stroke-width="2.5" class="node-border"/>
+          <text x="115" y="106" text-anchor="middle" font-size="16" font-weight="600" fill="var(--memphis-pink)" class="node-label">01</text>
+          <text x="115" y="134" text-anchor="middle" font-size="8" font-weight="500" fill="var(--text-muted)" class="node-label">Researcher</text>
+        </g>
+
+        <!-- Node 2: Designer -->
+        <g class="agent-node" data-agent="1" style="cursor:pointer;">
+          <circle cx="230" cy="100" r="36" class="node-glow" fill="url(#g2)"/>
+          <circle cx="230" cy="100" r="26" class="node-bg" fill="var(--bg)" fill-opacity="0.8" stroke="var(--memphis-teal)" stroke-width="2.5" class="node-border"/>
+          <text x="230" y="96" text-anchor="middle" font-size="14" font-weight="600" fill="var(--memphis-teal)" class="node-label">02</text>
+          <text x="230" y="124" text-anchor="middle" font-size="8" font-weight="500" fill="var(--text-muted)" class="node-label">Designer</text>
+        </g>
+
+        <!-- Node 3: Maker -->
+        <g class="agent-node" data-agent="2" style="cursor:pointer;">
+          <circle cx="345" cy="110" r="42" class="node-glow" fill="url(#g3)"/>
+          <circle cx="345" cy="110" r="32" class="node-bg" fill="var(--bg)" fill-opacity="0.8" stroke="var(--memphis-yellow)" stroke-width="2.5" class="node-border"/>
+          <text x="345" y="106" text-anchor="middle" font-size="16" font-weight="600" fill="var(--memphis-yellow)" class="node-label">03</text>
+          <text x="345" y="134" text-anchor="middle" font-size="8" font-weight="500" fill="var(--text-muted)" class="node-label">Maker</text>
+        </g>
+
+        <!-- Node 4: Marketer -->
+        <g class="agent-node" data-agent="3" style="cursor:pointer;">
+          <circle cx="460" cy="100" r="36" class="node-glow" fill="url(#g4)"/>
+          <circle cx="460" cy="100" r="26" class="node-bg" fill="var(--bg)" fill-opacity="0.8" stroke="var(--memphis-orange)" stroke-width="2.5" class="node-border"/>
+          <text x="460" y="96" text-anchor="middle" font-size="14" font-weight="600" fill="var(--memphis-orange)" class="node-label">04</text>
+          <text x="460" y="124" text-anchor="middle" font-size="8" font-weight="500" fill="var(--text-muted)" class="node-label">Marketer</text>
+        </g>
+
+        <!-- Node 5: Manager -->
+        <g class="agent-node" data-agent="4" style="cursor:pointer;">
+          <circle cx="575" cy="110" r="42" class="node-glow" fill="url(#g5)"/>
+          <circle cx="575" cy="110" r="32" class="node-bg" fill="var(--bg)" fill-opacity="0.8" stroke="var(--memphis-lavender)" stroke-width="2.5" class="node-border"/>
+          <text x="575" y="106" text-anchor="middle" font-size="16" font-weight="600" fill="var(--memphis-lavender)" class="node-label">05</text>
+          <text x="575" y="134" text-anchor="middle" font-size="8" font-weight="500" fill="var(--text-muted)" class="node-label">Manager</text>
+        </g>
+
+        <!-- Manager Orchestration arrow -->
+        <path d="M345 20 L345 15" stroke="var(--memphis-lavender)" stroke-width="2" stroke-dasharray="4 3" opacity="0.5"/>
+        <text x="345" y="12" text-anchor="middle" font-size="7" fill="var(--text-dim)" font-weight="500">Orchestrates</text>
+      </svg>
+    </div>
+
     <div class="agent-flow">
       <div class="agent-flow-line"></div>
+      <div class="agent-flow-particles">
+        <div class="agent-flow-particle pink"></div>
+        <div class="agent-flow-particle teal"></div>
+        <div class="agent-flow-particle yellow"></div>
+        <div class="agent-flow-particle pink" style="width:5px;height:5px;opacity:0.6;"></div>
+      </div>
 
       <div class="agent-flip-card reveal">
         <div class="agent-step" style="background:var(--memphis-pink);">01</div>
@@ -58,6 +131,7 @@
             <div>
               <h3 style="margin-bottom:4px;font-size:1.1rem;">Researcher</h3>
               <p style="font-size:0.85rem;color:var(--text-muted);">Analyses market trends, customer behaviour, and historical data</p>
+              <div class="agent-status"><span class="agent-status-dot active"></span><span class="agent-status-text">Analyzing 1,247 data points...</span></div>
             </div>
           </div>
           <div class="flip-card-back" style="text-align:left;">
@@ -75,6 +149,7 @@
             <div>
               <h3 style="margin-bottom:4px;font-size:1.1rem;">Designer</h3>
               <p style="font-size:0.85rem;color:var(--text-muted);">Optimises menu pricing, layout, and product mix based on data</p>
+              <div class="agent-status"><span class="agent-status-dot processing"></span><span class="agent-status-text">Optimizing 34 menu items...</span></div>
             </div>
           </div>
           <div class="flip-card-back" style="text-align:left;">
@@ -92,6 +167,7 @@
             <div>
               <h3 style="margin-bottom:4px;font-size:1.1rem;">Maker</h3>
               <p style="font-size:0.85rem;color:var(--text-muted);">Generates demand forecasts, staff schedules, and inventory plans</p>
+              <div class="agent-status"><span class="agent-status-dot active"></span><span class="agent-status-text">Generating 7-day forecast...</span></div>
             </div>
           </div>
           <div class="flip-card-back" style="text-align:left;">
@@ -109,6 +185,7 @@
             <div>
               <h3 style="margin-bottom:4px;font-size:1.1rem;">Marketer</h3>
               <p style="font-size:0.85rem;color:var(--text-muted);">Tracks campaign performance and customer engagement</p>
+              <div class="agent-status"><span class="agent-status-dot processing"></span><span class="agent-status-text">Tracking 12 active campaigns...</span></div>
             </div>
           </div>
           <div class="flip-card-back" style="text-align:left;">
@@ -126,6 +203,7 @@
             <div>
               <h3 style="margin-bottom:4px;font-size:1.1rem;">Manager</h3>
               <p style="font-size:0.85rem;color:var(--text-muted);">Orchestrates all agents and provides unified recommendations</p>
+              <div class="agent-status"><span class="agent-status-dot active"></span><span class="agent-status-text">Aggregating insights...</span></div>
             </div>
           </div>
           <div class="flip-card-back" style="text-align:left;">
@@ -189,12 +267,58 @@
     document.body.appendChild(dot); document.body.appendChild(ring);
     var mx = 0, my = 0, rx = 0, ry = 0;
     document.addEventListener('mousemove', function(e) { mx = e.clientX; my = e.clientY; dot.style.left = mx + 'px'; dot.style.top = my + 'px'; });
-    var hoverEls = 'a, button, .flip-card, .usecase-flip-card, .agent-flip-card, .team-flip-card, .pricing-card, .faq-item';
+    var hoverEls = 'a, button, .flip-card, .usecase-flip-card, .agent-flip-card, .team-flip-card, .faq-item';
     document.addEventListener('mouseover', function(e) { var t = e.target.closest(hoverEls); if (t) ring.classList.add('hover'); });
     document.addEventListener('mouseout', function(e) { var t = e.target.closest(hoverEls); if (t) ring.classList.remove('hover'); });
     function animateRing() { rx += (mx - rx) * 0.15; ry += (my - ry) * 0.15; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(animateRing); }
     animateRing();
   }
+
+  /* Interactive Agent Network — click nodes to scroll to cards */
+  var nodes = document.querySelectorAll('.agent-node');
+  var cards = document.querySelectorAll('.agent-flip-card');
+  nodes.forEach(function(node) {
+    node.addEventListener('click', function() {
+      var idx = parseInt(node.getAttribute('data-agent'));
+      nodes.forEach(function(n) { n.classList.remove('active'); });
+      node.classList.add('active');
+      if (cards[idx]) {
+        cards[idx].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  });
+
+  /* Scroll-based active node highlighting */
+  var agentObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var idx = Array.prototype.indexOf.call(cards, entry.target);
+        if (idx >= 0) {
+          nodes.forEach(function(n) { n.classList.remove('active'); });
+          if (nodes[idx]) nodes[idx].classList.add('active');
+        }
+      }
+    });
+  }, { threshold: 0.5 });
+  cards.forEach(function(c) { agentObserver.observe(c); });
+
+  /* Live Status Cycling */
+  var statusMessages = [
+    ['Analyzing 1,247 data points...', 'Scanning market trends...', 'Identifying patterns...'],
+    ['Optimizing 34 menu items...', 'Adjusting price points...', 'Recommending mix changes...'],
+    ['Generating 7-day forecast...', 'Building staff schedules...', 'Planning inventory...'],
+    ['Tracking 12 active campaigns...', 'Measuring engagement...', 'Calculating ROAS...'],
+    ['Aggregating insights...', 'Resolving conflicts...', 'Generating recommendations...']
+  ];
+  var statusEls = document.querySelectorAll('.agent-status-text');
+  setInterval(function() {
+    statusEls.forEach(function(el, i) {
+      var msgs = statusMessages[i] || ['Processing...'];
+      var current = el.textContent;
+      var nextIdx = (msgs.indexOf(current) + 1) % msgs.length;
+      el.textContent = msgs[nextIdx];
+    });
+  }, 3500);
 })();
 </script>
 </body>
