@@ -128,17 +128,31 @@
         <div class="flip-card-inner">
           <div class="flip-card-front" style="border-left-color:var(--memphis-pink);">
             <div class="agent-icon-box"><img src="assets/agent-researcher.svg" alt="Researcher"></div>
-            <div>
+            <div style="flex:1;">
               <h3 style="margin-bottom:4px;font-size:1.1rem;">Researcher</h3>
               <p style="font-size:0.85rem;color:var(--text-muted);">Analyses market trends, customer behaviour, and historical data</p>
+              <div class="agent-tags">
+                <span class="agent-tag">Sales Data</span>
+                <span class="agent-tag">Market Trends</span>
+                <span class="agent-tag">Seasonality</span>
+              </div>
+              <div class="agent-metric">
+                <span class="agent-metric-value" style="color:var(--memphis-pink);">1,247</span>
+                <span class="agent-metric-label">data points<br>analyzed today</span>
+              </div>
               <div class="agent-status"><span class="agent-status-dot active"></span><span class="agent-status-text">Analyzing 1,247 data points...</span></div>
             </div>
           </div>
           <div class="flip-card-back" style="text-align:left;">
             <h3 style="font-size:1.1rem;">Researcher AI</h3>
             <p style="font-size:0.85rem;opacity:0.9;">Scans market data, analyses past sales, identifies patterns and seasonality. Detects emerging trends and local events that impact demand.</p>
+            <div class="agent-tags" style="margin-top:12px;">
+              <span class="agent-tag" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.2);color:#fff;">Input: POS + Market Feeds</span>
+              <span class="agent-tag" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.2);color:#fff;">Output: Pattern Report</span>
+            </div>
           </div>
         </div>
+        <div class="agent-flow-arrow"><span class="arrow-line"></span><span class="arrow-head">▼</span><span style="font-size:0.55rem;color:var(--text-dim);opacity:0.6;">passes insights</span></div>
       </div>
 
       <div class="agent-flip-card reveal">
@@ -146,17 +160,31 @@
         <div class="flip-card-inner">
           <div class="flip-card-front" style="border-left-color:var(--memphis-teal);">
             <div class="agent-icon-box"><img src="assets/agent-designer.svg" alt="Designer"></div>
-            <div>
+            <div style="flex:1;">
               <h3 style="margin-bottom:4px;font-size:1.1rem;">Designer</h3>
               <p style="font-size:0.85rem;color:var(--text-muted);">Optimises menu pricing, layout, and product mix based on data</p>
+              <div class="agent-tags">
+                <span class="agent-tag">Menu Data</span>
+                <span class="agent-tag">Pricing</span>
+                <span class="agent-tag">Margins</span>
+              </div>
+              <div class="agent-metric">
+                <span class="agent-metric-value" style="color:var(--memphis-teal);">34</span>
+                <span class="agent-metric-label">menu items<br>optimized</span>
+              </div>
               <div class="agent-status"><span class="agent-status-dot processing"></span><span class="agent-status-text">Optimizing 34 menu items...</span></div>
             </div>
           </div>
           <div class="flip-card-back" style="text-align:left;">
             <h3 style="font-size:1.1rem;">Designer AI</h3>
             <p style="font-size:0.85rem;opacity:0.9;">Analyses menu performance, suggests pricing adjustments, and recommends product mix changes to maximise margin without sacrificing volume.</p>
+            <div class="agent-tags" style="margin-top:12px;">
+              <span class="agent-tag" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.2);color:#fff;">Input: Sales + Menu</span>
+              <span class="agent-tag" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.2);color:#fff;">Output: Optimisation Plan</span>
+            </div>
           </div>
         </div>
+        <div class="agent-flow-arrow"><span class="arrow-line"></span><span class="arrow-head">▼</span><span style="font-size:0.55rem;color:var(--text-dim);opacity:0.6;">passes recommendations</span></div>
       </div>
 
       <div class="agent-flip-card reveal">
@@ -164,17 +192,31 @@
         <div class="flip-card-inner">
           <div class="flip-card-front" style="border-left-color:var(--memphis-yellow);">
             <div class="agent-icon-box"><img src="assets/agent-maker.svg" alt="Maker"></div>
-            <div>
+            <div style="flex:1;">
               <h3 style="margin-bottom:4px;font-size:1.1rem;">Maker</h3>
               <p style="font-size:0.85rem;color:var(--text-muted);">Generates demand forecasts, staff schedules, and inventory plans</p>
+              <div class="agent-tags">
+                <span class="agent-tag">Forecasts</span>
+                <span class="agent-tag">Schedules</span>
+                <span class="agent-tag">Inventory</span>
+              </div>
+              <div class="agent-metric">
+                <span class="agent-metric-value" style="color:var(--memphis-yellow);">94%</span>
+                <span class="agent-metric-label">forecast<br>accuracy</span>
+              </div>
               <div class="agent-status"><span class="agent-status-dot active"></span><span class="agent-status-text">Generating 7-day forecast...</span></div>
             </div>
           </div>
           <div class="flip-card-back" style="text-align:left;">
             <h3 style="font-size:1.1rem;">Maker AI</h3>
             <p style="font-size:0.85rem;opacity:0.9;">Takes insights from Researcher and Designer to generate daily demand forecasts, optimal staff rotas, and smart purchasing plans that minimise waste.</p>
+            <div class="agent-tags" style="margin-top:12px;">
+              <span class="agent-tag" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.2);color:#fff;">Input: Insights</span>
+              <span class="agent-tag" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.2);color:#fff;">Output: Forecasts</span>
+            </div>
           </div>
         </div>
+        <div class="agent-flow-arrow"><span class="arrow-line"></span><span class="arrow-head">▼</span><span style="font-size:0.55rem;color:var(--text-dim);opacity:0.6;">passes data</span></div>
       </div>
 
       <div class="agent-flip-card reveal">
@@ -182,17 +224,31 @@
         <div class="flip-card-inner">
           <div class="flip-card-front" style="border-left-color:var(--memphis-orange);">
             <div class="agent-icon-box"><img src="assets/agent-marketer.svg" alt="Marketer"></div>
-            <div>
+            <div style="flex:1;">
               <h3 style="margin-bottom:4px;font-size:1.1rem;">Marketer</h3>
               <p style="font-size:0.85rem;color:var(--text-muted);">Tracks campaign performance and customer engagement</p>
+              <div class="agent-tags">
+                <span class="agent-tag">Campaigns</span>
+                <span class="agent-tag">ROI</span>
+                <span class="agent-tag">Engagement</span>
+              </div>
+              <div class="agent-metric">
+                <span class="agent-metric-value" style="color:var(--memphis-orange);">12</span>
+                <span class="agent-metric-label">active campaigns<br>tracked</span>
+              </div>
               <div class="agent-status"><span class="agent-status-dot processing"></span><span class="agent-status-text">Tracking 12 active campaigns...</span></div>
             </div>
           </div>
           <div class="flip-card-back" style="text-align:left;">
             <h3 style="font-size:1.1rem;">Marketer AI</h3>
             <p style="font-size:0.85rem;opacity:0.9;">Monitors marketing ROI, tracks customer acquisition costs, identifies your most effective channels, and recommends where to invest your marketing budget.</p>
+            <div class="agent-tags" style="margin-top:12px;">
+              <span class="agent-tag" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.2);color:#fff;">Input: Campaign Data</span>
+              <span class="agent-tag" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.2);color:#fff;">Output: ROI Report</span>
+            </div>
           </div>
         </div>
+        <div class="agent-flow-arrow"><span class="arrow-line"></span><span class="arrow-head">▼</span><span style="font-size:0.55rem;color:var(--text-dim);opacity:0.6;">passes performance data</span></div>
       </div>
 
       <div class="agent-flip-card reveal">
@@ -200,15 +256,28 @@
         <div class="flip-card-inner">
           <div class="flip-card-front" style="border-left-color:var(--memphis-lavender);">
             <div class="agent-icon-box"><img src="assets/agent-manager.svg" alt="Manager"></div>
-            <div>
+            <div style="flex:1;">
               <h3 style="margin-bottom:4px;font-size:1.1rem;">Manager</h3>
               <p style="font-size:0.85rem;color:var(--text-muted);">Orchestrates all agents and provides unified recommendations</p>
+              <div class="agent-tags">
+                <span class="agent-tag">Dashboard</span>
+                <span class="agent-tag">Alerts</span>
+                <span class="agent-tag">Reports</span>
+              </div>
+              <div class="agent-metric">
+                <span class="agent-metric-value" style="color:var(--memphis-lavender);">5</span>
+                <span class="agent-metric-label">agents<br>orchestrated</span>
+              </div>
               <div class="agent-status"><span class="agent-status-dot active"></span><span class="agent-status-text">Aggregating insights...</span></div>
             </div>
           </div>
           <div class="flip-card-back" style="text-align:left;">
             <h3 style="font-size:1.1rem;">Manager AI</h3>
             <p style="font-size:0.85rem;opacity:0.9;">The orchestrator. Combines outputs from all agents, resolves conflicts, and presents a unified dashboard with clear, prioritised recommendations for your business.</p>
+            <div class="agent-tags" style="margin-top:12px;">
+              <span class="agent-tag" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.2);color:#fff;">Input: All Agents</span>
+              <span class="agent-tag" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.2);color:#fff;">Output: Dashboard</span>
+            </div>
           </div>
         </div>
       </div>
@@ -304,11 +373,11 @@
 
   /* Live Status Cycling */
   var statusMessages = [
-    ['Analyzing 1,247 data points...', 'Scanning market trends...', 'Identifying patterns...'],
-    ['Optimizing 34 menu items...', 'Adjusting price points...', 'Recommending mix changes...'],
-    ['Generating 7-day forecast...', 'Building staff schedules...', 'Planning inventory...'],
-    ['Tracking 12 active campaigns...', 'Measuring engagement...', 'Calculating ROAS...'],
-    ['Aggregating insights...', 'Resolving conflicts...', 'Generating recommendations...']
+    ['Analyzing 1,247 data points...', 'Scanning market trends...', 'Identifying 3 peak periods...', 'Cross-referencing seasonality...'],
+    ['Optimizing 34 menu items...', 'Adjusting 12 price points...', 'Recommending mix changes...', 'Calculating margin impact...'],
+    ['Generating 7-day forecast...', 'Building staff schedules...', 'Planning inventory orders...', '94% accuracy achieved...'],
+    ['Tracking 12 active campaigns...', 'Measuring engagement rates...', 'Calculating ROAS...', 'Identifying top channels...'],
+    ['Aggregating 5 agent insights...', 'Resolving conflicts...', 'Generating unified report...', 'Updating dashboard...']
   ];
   var statusEls = document.querySelectorAll('.agent-status-text');
   setInterval(function() {
