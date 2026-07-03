@@ -48,7 +48,7 @@
   </div>
   <div class="container">
     <div class="agent-network reveal" id="agentNetwork">
-      <svg viewBox="0 0 750 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg viewBox="0 0 750 280" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <radialGradient id="g1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="var(--memphis-pink)"/><stop offset="100%" stop-color="var(--memphis-pink)" stop-opacity="0"/></radialGradient>
           <radialGradient id="g2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="var(--memphis-teal)"/><stop offset="100%" stop-color="var(--memphis-teal)" stop-opacity="0"/></radialGradient>
@@ -57,60 +57,60 @@
           <radialGradient id="g5" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="var(--memphis-lavender)"/><stop offset="100%" stop-color="var(--memphis-lavender)" stop-opacity="0"/></radialGradient>
         </defs>
 
-        <!-- Arrows -->
-        <path d="M115 100 L230 68" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow" marker-end="url(#arrow)"/>
-        <path d="M230 132 L115 120" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
-        <path d="M230 68 L345 100" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
-        <path d="M345 120 L230 132" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
-        <path d="M345 100 L460 68" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
-        <path d="M460 132 L345 120" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
-        <path d="M460 68 L575 100" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
-        <path d="M575 120 L460 132" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
-        <path d="M345 20 L345 100" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
+        <!-- Arrows between nodes -->
+        <path d="M155 145 L240 130" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
+        <path d="M240 170 L155 155" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
+        <path d="M270 130 L370 145" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
+        <path d="M370 170 L270 170" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
+        <path d="M400 145 L495 130" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
+        <path d="M495 170 L400 170" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
+        <path d="M525 130 L610 145" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
+        <path d="M610 170 L525 170" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
+        <path d="M370 85 L370 120" stroke="#d4d4d8" stroke-width="1.5" class="network-arrow"/>
 
         <!-- Node 1: Researcher -->
         <g class="agent-node" data-agent="0" style="cursor:pointer;">
-          <circle cx="115" cy="110" r="42" class="node-glow" fill="url(#g1)"/>
-          <circle cx="115" cy="110" r="32" class="node-bg" fill="var(--bg)" fill-opacity="0.8" stroke="var(--memphis-pink)" stroke-width="2.5" class="node-border"/>
-          <text x="115" y="106" text-anchor="middle" font-size="16" font-weight="600" fill="var(--memphis-pink)" class="node-label">01</text>
-          <text x="115" y="134" text-anchor="middle" font-size="8" font-weight="500" fill="var(--text-muted)" class="node-label">Researcher</text>
+          <circle cx="115" cy="150" r="48" class="node-glow" fill="url(#g1)"/>
+          <circle cx="115" cy="150" r="38" class="node-bg" fill="var(--bg)" fill-opacity="0.8" stroke="var(--memphis-pink)" stroke-width="2.5" class="node-border"/>
+          <text x="115" y="145" text-anchor="middle" font-size="17" font-weight="600" fill="var(--memphis-pink)" class="node-label">01</text>
+          <text x="115" y="175" text-anchor="middle" font-size="9" font-weight="500" fill="var(--text-muted)" class="node-label">Researcher</text>
         </g>
 
         <!-- Node 2: Designer -->
         <g class="agent-node" data-agent="1" style="cursor:pointer;">
-          <circle cx="230" cy="100" r="36" class="node-glow" fill="url(#g2)"/>
-          <circle cx="230" cy="100" r="26" class="node-bg" fill="var(--bg)" fill-opacity="0.8" stroke="var(--memphis-teal)" stroke-width="2.5" class="node-border"/>
-          <text x="230" y="96" text-anchor="middle" font-size="14" font-weight="600" fill="var(--memphis-teal)" class="node-label">02</text>
-          <text x="230" y="124" text-anchor="middle" font-size="8" font-weight="500" fill="var(--text-muted)" class="node-label">Designer</text>
+          <circle cx="240" cy="150" r="38" class="node-glow" fill="url(#g2)"/>
+          <circle cx="240" cy="150" r="28" class="node-bg" fill="var(--bg)" fill-opacity="0.8" stroke="var(--memphis-teal)" stroke-width="2.5" class="node-border"/>
+          <text x="240" y="145" text-anchor="middle" font-size="15" font-weight="600" fill="var(--memphis-teal)" class="node-label">02</text>
+          <text x="240" y="173" text-anchor="middle" font-size="9" font-weight="500" fill="var(--text-muted)" class="node-label">Designer</text>
         </g>
 
         <!-- Node 3: Maker -->
         <g class="agent-node" data-agent="2" style="cursor:pointer;">
-          <circle cx="345" cy="110" r="42" class="node-glow" fill="url(#g3)"/>
-          <circle cx="345" cy="110" r="32" class="node-bg" fill="var(--bg)" fill-opacity="0.8" stroke="var(--memphis-yellow)" stroke-width="2.5" class="node-border"/>
-          <text x="345" y="106" text-anchor="middle" font-size="16" font-weight="600" fill="var(--memphis-yellow)" class="node-label">03</text>
-          <text x="345" y="134" text-anchor="middle" font-size="8" font-weight="500" fill="var(--text-muted)" class="node-label">Maker</text>
+          <circle cx="370" cy="150" r="48" class="node-glow" fill="url(#g3)"/>
+          <circle cx="370" cy="150" r="38" class="node-bg" fill="var(--bg)" fill-opacity="0.8" stroke="var(--memphis-yellow)" stroke-width="2.5" class="node-border"/>
+          <text x="370" y="145" text-anchor="middle" font-size="17" font-weight="600" fill="var(--memphis-yellow)" class="node-label">03</text>
+          <text x="370" y="175" text-anchor="middle" font-size="9" font-weight="500" fill="var(--text-muted)" class="node-label">Maker</text>
         </g>
 
         <!-- Node 4: Marketer -->
         <g class="agent-node" data-agent="3" style="cursor:pointer;">
-          <circle cx="460" cy="100" r="36" class="node-glow" fill="url(#g4)"/>
-          <circle cx="460" cy="100" r="26" class="node-bg" fill="var(--bg)" fill-opacity="0.8" stroke="var(--memphis-orange)" stroke-width="2.5" class="node-border"/>
-          <text x="460" y="96" text-anchor="middle" font-size="14" font-weight="600" fill="var(--memphis-orange)" class="node-label">04</text>
-          <text x="460" y="124" text-anchor="middle" font-size="8" font-weight="500" fill="var(--text-muted)" class="node-label">Marketer</text>
+          <circle cx="495" cy="150" r="38" class="node-glow" fill="url(#g4)"/>
+          <circle cx="495" cy="150" r="28" class="node-bg" fill="var(--bg)" fill-opacity="0.8" stroke="var(--memphis-orange)" stroke-width="2.5" class="node-border"/>
+          <text x="495" y="145" text-anchor="middle" font-size="15" font-weight="600" fill="var(--memphis-orange)" class="node-label">04</text>
+          <text x="495" y="173" text-anchor="middle" font-size="9" font-weight="500" fill="var(--text-muted)" class="node-label">Marketer</text>
         </g>
 
         <!-- Node 5: Manager -->
         <g class="agent-node" data-agent="4" style="cursor:pointer;">
-          <circle cx="575" cy="110" r="42" class="node-glow" fill="url(#g5)"/>
-          <circle cx="575" cy="110" r="32" class="node-bg" fill="var(--bg)" fill-opacity="0.8" stroke="var(--memphis-lavender)" stroke-width="2.5" class="node-border"/>
-          <text x="575" y="106" text-anchor="middle" font-size="16" font-weight="600" fill="var(--memphis-lavender)" class="node-label">05</text>
-          <text x="575" y="134" text-anchor="middle" font-size="8" font-weight="500" fill="var(--text-muted)" class="node-label">Manager</text>
+          <circle cx="610" cy="150" r="48" class="node-glow" fill="url(#g5)"/>
+          <circle cx="610" cy="150" r="38" class="node-bg" fill="var(--bg)" fill-opacity="0.8" stroke="var(--memphis-lavender)" stroke-width="2.5" class="node-border"/>
+          <text x="610" y="145" text-anchor="middle" font-size="17" font-weight="600" fill="var(--memphis-lavender)" class="node-label">05</text>
+          <text x="610" y="175" text-anchor="middle" font-size="9" font-weight="500" fill="var(--text-muted)" class="node-label">Manager</text>
         </g>
 
-        <!-- Manager Orchestration arrow -->
-        <path d="M345 20 L345 15" stroke="var(--memphis-lavender)" stroke-width="2" stroke-dasharray="4 3" opacity="0.5"/>
-        <text x="345" y="12" text-anchor="middle" font-size="7" fill="var(--text-dim)" font-weight="500">Orchestrates</text>
+        <!-- Orchestration label -->
+        <path d="M370 65 L370 75" stroke="var(--memphis-lavender)" stroke-width="2" stroke-dasharray="4 3" opacity="0.5"/>
+        <text x="370" y="55" text-anchor="middle" font-size="9" fill="var(--text-dim)" font-weight="500">Orchestrates</text>
       </svg>
     </div>
 

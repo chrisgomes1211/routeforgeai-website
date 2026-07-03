@@ -179,8 +179,8 @@ a:hover { color: var(--accent-hover); }
 .agent-flow-particle:nth-child(4) { animation-delay: 3.9s; }
 
 /* Interactive Agent Network Diagram */
-.agent-network { text-align: center; margin-bottom: 60px; position: relative; }
-.agent-network svg { width: 100%; max-width: 750px; height: auto; margin: 0 auto; display: block; }
+.agent-network { text-align: center; padding: 40px 0 20px; margin-bottom: 40px; position: relative; }
+.agent-network svg { width: 100%; max-width: 850px; height: auto; margin: 0 auto; display: block; }
 .agent-network .agent-node { cursor: pointer; transition: all 0.3s ease; }
 .agent-network .agent-node:hover .node-bg { fill-opacity: 0.25; }
 .agent-network .agent-node:hover .node-border { stroke-width: 3; }
