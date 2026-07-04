@@ -218,7 +218,7 @@ a:hover { color: var(--accent-hover); }
 .stat-label { font-size: 0.9rem; color: var(--text-muted); }
 
 /* Flip Cards Base */
-.flip-card-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.flip-card-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .flip-card { perspective: 1000px; height: 340px; }
 .flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; }
 .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
@@ -544,6 +544,10 @@ a:hover { color: var(--accent-hover); }
 .back-to-top:hover { background: var(--accent-hover); transform: translateY(-3px); }
 
 /* Responsive */
+@media (max-width: 1100px) {
+  .flip-card-row { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 1024px) {
   .hero-content { grid-template-columns: 1fr; gap: 40px; }
   .hero-text { max-width: 100%; text-align: center; }
