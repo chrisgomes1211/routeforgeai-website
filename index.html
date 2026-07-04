@@ -51,55 +51,117 @@
       <div class="hero-text" data-speed="0.3">
         <div class="hero-badge">Now in Beta</div>
         <div class="squiggle-line" style="margin:0 0 12px;max-width:80px;"></div>
-        <h1>AI built for your<br><span class="gradient-text">F&B Business</span></h1>
+        <h1>AI built for your<br><span class="gradient-text"><span class="typewriter-wrap"><span class="typewriter-word">F&amp;B Business</span><span class="typewriter-cursor"></span></span></span></h1>
         <p>Connect your sales, inventory, and staffing data. Get AI-powered demand forecasts, reduce waste, and optimise labour — all from one intelligent dashboard.</p>
         <div class="hero-actions">
           <a href="contact.html" class="btn btn-primary">Start Free Trial</a>
           <a href="how-it-works.html" class="btn btn-outline">See How It Works &rarr;</a>
         </div>
+        <div class="hero-ticker" id="heroTicker">
+          <span class="hero-ticker-item"><span class="hero-ticker-dot"></span> <span class="hero-ticker-num" id="tickerMeals">1,247</span> meals forecasted today</span>
+          <span class="hero-ticker-sep">·</span>
+          <span class="hero-ticker-item"><span class="hero-ticker-dot"></span> <span class="hero-ticker-num" id="tickerCafes">12</span> cafes active</span>
+          <span class="hero-ticker-sep">·</span>
+          <span class="hero-ticker-item"><span class="hero-ticker-dot"></span> <span class="hero-ticker-num" id="tickerSchedules">34</span> schedules optimized</span>
+        </div>
       </div>
-      <div class="dashboard-box" data-speed="0.2">
+      <div class="dashboard-box" id="dashBox" data-speed="0.2">
         <div class="browser-frame">
           <div class="browser-bar">
             <div class="browser-dots"><span class="browser-dot red"></span><span class="browser-dot yellow"></span><span class="browser-dot green"></span></div>
             <div class="browser-url">app.routeforge.ai/dashboard</div>
           </div>
-          <div class="dash-grid">
-            <div class="dash-card">
-              <div class="dash-label">Health Score</div>
-              <div class="dash-value accent">86</div>
-              <div class="dash-bar"><div class="dash-bar-fill" style="width:86%"></div></div>
+
+          <!-- Stage 1: Data Collection -->
+          <div class="dash-stage active" data-stage="0">
+            <div class="dash-stage-label" style="padding:16px 20px 0;font-size:0.72rem;">Collecting data from your business</div>
+            <div class="dash-sources">
+              <div class="dash-source">
+                <span class="dash-source-icon">🛒</span>
+                <div class="dash-source-name">POS Sales</div>
+                <div class="dash-source-count" style="color:var(--memphis-pink);">1,247</div>
+                <div class="dash-source-bar"><div class="dash-source-fill" style="width:100%;background:var(--memphis-pink);"></div></div>
+                <div style="margin-top:6px;"><span class="dash-source-dot live"></span><span style="font-size:0.65rem;color:var(--text-dim);">Live feed</span></div>
+              </div>
+              <div class="dash-source">
+                <span class="dash-source-icon">📦</span>
+                <div class="dash-source-name">Inventory</div>
+                <div class="dash-source-count" style="color:var(--memphis-teal);">342</div>
+                <div class="dash-source-bar"><div class="dash-source-fill" style="width:78%;background:var(--memphis-teal);"></div></div>
+                <div style="margin-top:6px;"><span class="dash-source-dot live"></span><span style="font-size:0.65rem;color:var(--text-dim);">Synced</span></div>
+              </div>
+              <div class="dash-source">
+                <span class="dash-source-icon">📅</span>
+                <div class="dash-source-name">Staffing</div>
+                <div class="dash-source-count" style="color:var(--memphis-yellow);">28</div>
+                <div class="dash-source-bar"><div class="dash-source-fill" style="width:62%;background:var(--memphis-yellow);"></div></div>
+                <div style="margin-top:6px;"><span class="dash-source-dot live"></span><span style="font-size:0.65rem;color:var(--text-dim);">Loaded</span></div>
+              </div>
             </div>
-            <div class="dash-card">
-              <div class="dash-label">Staffing</div>
-              <div class="dash-value green">-12%</div>
-              <div class="dash-sub">over-optimised</div>
-            </div>
-            <div class="dash-card">
-              <div class="dash-label">Waste</div>
-              <div class="dash-value green">-22%</div>
-              <div class="dash-sub">vs last month</div>
-            </div>
-            <div class="dash-card">
-              <div class="dash-label">Revenue</div>
-              <div class="dash-value accent">+8.4%</div>
-              <div class="dash-sub">projected growth</div>
-            </div>
-            <div class="dash-card">
-              <div class="dash-label">Forecast</div>
-              <div class="dash-value">94%</div>
-              <div class="dash-sub">accuracy rate</div>
-            </div>
-            <div class="dash-card">
-              <div class="dash-label">CO2 Saved</div>
-              <div class="dash-value green">2.4t</div>
-              <div class="dash-sub">this quarter</div>
+            <div class="dash-connector">
+              <span>Data ingested</span>
+              <span class="dash-connector-line"><span class="dash-connector-dot"></span></span>
+              <span style="color:var(--accent);font-weight:600;">1,617 records</span>
             </div>
           </div>
-          <div class="dash-agents">
-            <div class="dash-agent-row"><span class="pulse-dot active"></span> Researcher AI &mdash; Analyzing market data</div>
-            <div class="dash-agent-row"><span class="pulse-dot active"></span> Designer AI &mdash; Optimising menu</div>
-            <div class="dash-agent-row"><span class="pulse-dot processing"></span> Maker AI &mdash; Processing inventory</div>
+
+          <!-- Stage 2: ML Processing -->
+          <div class="dash-stage" data-stage="1">
+            <div class="dash-engine">
+              <div class="dash-engine-visual">
+                <div class="dash-engine-orbit"><span class="dash-engine-particle"></span></div>
+                <div class="dash-engine-orbit"><span class="dash-engine-particle"></span></div>
+                <div class="dash-engine-core">AI</div>
+              </div>
+              <div class="dash-engine-status" id="engineStatus">Analyzing patterns...</div>
+              <div class="dash-engine-progress">
+                <span style="font-size:0.7rem;color:var(--text-dim);" id="enginePercent">0%</span>
+                <div class="dash-engine-progress-bar"><div class="dash-engine-progress-fill" id="engineFill"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 3: Results -->
+          <div class="dash-stage" data-stage="2">
+            <div class="dash-results">
+              <div class="dash-results-badge">✓ Forecasts ready</div>
+              <div class="dash-grid">
+                <div class="dash-card dash-result-card">
+                  <div class="dash-label">Health Score</div>
+                  <div class="dash-value accent" id="rHealth">86</div>
+                  <div class="dash-bar"><div class="dash-bar-fill" style="width:86%"></div></div>
+                </div>
+                <div class="dash-card dash-result-card">
+                  <div class="dash-label">Staffing</div>
+                  <div class="dash-value green" id="rStaffing">-12%</div>
+                  <div class="dash-sub">over-optimised</div>
+                </div>
+                <div class="dash-card dash-result-card">
+                  <div class="dash-label">Waste</div>
+                  <div class="dash-value green" id="rWaste">-22%</div>
+                  <div class="dash-sub">vs last month</div>
+                </div>
+                <div class="dash-card dash-result-card">
+                  <div class="dash-label">Revenue</div>
+                  <div class="dash-value accent" id="rRevenue">+8.4%</div>
+                  <div class="dash-sub">projected growth</div>
+                </div>
+                <div class="dash-card dash-result-card">
+                  <div class="dash-label">Forecast</div>
+                  <div class="dash-value" id="rForecast">94%</div>
+                  <div class="dash-sub">accuracy rate</div>
+                </div>
+                <div class="dash-card dash-result-card">
+                  <div class="dash-label">CO2 Saved</div>
+                  <div class="dash-value green" id="rCo2">2.4t</div>
+                  <div class="dash-sub">this quarter</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-agents" id="dashAgents">
+            <div class="dash-agent-row"><span class="pulse-dot active"></span> <span id="agentLabel">Ingesting data from 3 sources...</span></div>
           </div>
         </div>
       </div>
@@ -408,12 +470,132 @@
     document.body.appendChild(dot); document.body.appendChild(ring);
     var mx = 0, my = 0, rx = 0, ry = 0;
     document.addEventListener('mousemove', function(e) { mx = e.clientX; my = e.clientY; dot.style.left = mx + 'px'; dot.style.top = my + 'px'; });
-    var hoverEls = 'a, button, .flip-card, .usecase-flip-card, .agent-flip-card, .team-flip-card, .pricing-card, .faq-item';
+    var hoverEls = 'a, button, .flip-card, .usecase-flip-card, .agent-flip-card, .team-flip-card, .faq-item';
     document.addEventListener('mouseover', function(e) { var t = e.target.closest(hoverEls); if (t) ring.classList.add('hover'); });
     document.addEventListener('mouseout', function(e) { var t = e.target.closest(hoverEls); if (t) ring.classList.remove('hover'); });
     function animateRing() { rx += (mx - rx) * 0.15; ry += (my - ry) * 0.15; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(animateRing); }
     animateRing();
+
+    /* Dashboard tilt on mouse move */
+    var dashBox = document.getElementById('dashBox');
+    if (dashBox) {
+      dashBox.addEventListener('mousemove', function(e) {
+        var rect = dashBox.getBoundingClientRect();
+        var x = (e.clientX - rect.left) / rect.width - 0.5;
+        var y = (e.clientY - rect.top) / rect.height - 0.5;
+        dashBox.style.transform = 'rotateY(' + (x * 4) + 'deg) rotateX(' + (-y * 4) + 'deg)';
+      });
+      dashBox.addEventListener('mouseleave', function() {
+        dashBox.style.transform = 'rotateY(0deg) rotateX(0deg)';
+      });
+    }
   }
+
+  /* Typewriter */
+  (function() {
+    var words = ['F&amp;B Business', 'Cafe', 'Restaurant', 'Ghost Kitchen', 'Bistro'];
+    var wordEl = document.querySelector('.typewriter-word');
+    var cursorEl = document.querySelector('.typewriter-cursor');
+    if (!wordEl) return;
+    var idx = 0, charIdx = 0, deleting = false;
+    function typeStep() {
+      var word = words[idx];
+      if (deleting) {
+        charIdx--;
+        wordEl.innerHTML = word.substring(0, charIdx);
+        if (charIdx === 0) { deleting = false; idx = (idx + 1) % words.length; setTimeout(typeStep, 300); return; }
+        setTimeout(typeStep, 40);
+      } else {
+        charIdx++;
+        wordEl.innerHTML = word.substring(0, charIdx);
+        if (charIdx === word.length) { deleting = true; setTimeout(typeStep, 2500); return; }
+        setTimeout(typeStep, 60);
+      }
+    }
+    setTimeout(typeStep, 1500);
+  })();
+
+  /* Dashboard Stage Cycling */
+  (function() {
+    var stages = document.querySelectorAll('.dash-stage');
+    var agentLabel = document.getElementById('agentLabel');
+    if (!stages.length) return;
+    var current = 0;
+    var engineFill = document.getElementById('engineFill');
+    var engineStatus = document.getElementById('engineStatus');
+    var enginePercent = document.getElementById('enginePercent');
+    var statusMsgs = [
+      ['Ingesting data from 3 sources...'],
+      ['Researcher AI &mdash; Analyzing patterns', 'Designer AI &mdash; Optimizing menu', 'Maker AI &mdash; Generating forecasts'],
+      ['Manager AI &mdash; Dashboard updated']
+    ];
+    var stageLabels = ['Collecting data from your business', 'Processing with AI engine', 'AI forecasts ready'];
+
+    function nextStage() {
+      stages.forEach(function(s, i) {
+        s.classList.toggle('active', i === current);
+      });
+      if (agentLabel) agentLabel.innerHTML = statusMsgs[current][0];
+      if (current === 1) startEngine();
+      if (current === 2) animateResults();
+      current = (current + 1) % stages.length;
+      var label = document.querySelector('.dash-stage-label');
+      if (label) label.textContent = stageLabels[(current + 2) % 3];
+    }
+
+    /* Stage 2 engine progress */
+    var engineTimer = null;
+    function startEngine() {
+      if (engineTimer) { clearInterval(engineTimer); engineTimer = null; }
+      var pct = 0;
+      var msgs = ['Analyzing patterns...', 'Identifying trends...', 'Generating forecasts...', 'Finalizing results...'];
+      var msgIdx = 0;
+      if (engineFill) engineFill.style.width = '0%';
+      if (enginePercent) enginePercent.textContent = '0%';
+      if (engineStatus) engineStatus.textContent = msgs[0];
+      engineTimer = setInterval(function() {
+        pct += 2;
+        if (pct > 100) pct = 100;
+        if (engineFill) engineFill.style.width = pct + '%';
+        if (enginePercent) enginePercent.textContent = pct + '%';
+        if (pct < 100 && pct % 30 === 0) {
+          msgIdx = Math.min(msgIdx + 1, msgs.length - 1);
+          if (engineStatus) engineStatus.textContent = msgs[msgIdx];
+        }
+        if (pct >= 100) { clearInterval(engineTimer); engineTimer = null; if (engineStatus) engineStatus.textContent = 'Done!'; }
+      }, 60);
+    }
+
+    /* Stage 3 result card pop-in */
+    var resultAnimating = false;
+    function animateResults() {
+      if (resultAnimating) return;
+      resultAnimating = true;
+      var cards = document.querySelectorAll('.dash-result-card');
+      cards.forEach(function(c, i) {
+        c.style.animation = 'none';
+        c.offsetHeight;
+        c.style.animation = '';
+      });
+      setTimeout(function() { resultAnimating = false; }, 1000);
+    }
+
+    nextStage();
+    setInterval(nextStage, 9200);
+  })();
+
+  /* Live Ticker randomization */
+  (function() {
+    function randomDelta(v) { var d = Math.round(v * (0.05 + Math.random() * 0.08)); return Math.random() > 0.5 ? v + d : v - d; }
+    setInterval(function() {
+      var el = document.getElementById('tickerMeals');
+      if (el) el.textContent = Math.max(800, randomDelta(parseInt(el.textContent.replace(',','')))).toLocaleString();
+      el = document.getElementById('tickerCafes');
+      if (el) el.textContent = Math.max(8, randomDelta(parseInt(el.textContent)));
+      el = document.getElementById('tickerSchedules');
+      if (el) el.textContent = Math.max(20, randomDelta(parseInt(el.textContent)));
+    }, 7000);
+  })();
 })();
 </script>
 </body>
