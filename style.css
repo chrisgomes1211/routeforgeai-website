@@ -70,7 +70,7 @@ a:hover { color: var(--accent-hover); }
 .burger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
 /* Hero */
-.hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding-top: var(--nav-height); background: var(--bg); }
+.hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; padding-top: var(--nav-height); padding-bottom: var(--nav-height); background: var(--bg); }
 .hero-bg-image { position: absolute; inset: 0; z-index: 0; background: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&q=80&auto=format&fit=crop') center center / cover no-repeat; pointer-events: none; }
 .hero-bg-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, var(--bg) 35%, rgba(250,248,246,0.6) 55%, rgba(250,248,246,0.15) 80%); }
 .hero-grid { position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px); background-size: 60px 60px; }
@@ -218,7 +218,7 @@ a:hover { color: var(--accent-hover); }
 .stat-label { font-size: 0.9rem; color: var(--text-muted); }
 
 /* Flip Cards Base */
-.flip-card-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.flip-card-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 20px; }
 .flip-card { perspective: 1000px; height: 340px; }
 .flip-card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); transform-style: preserve-3d; }
 .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
@@ -333,7 +333,7 @@ a:hover { color: var(--accent-hover); }
 .usecase-image-strip { width: 100%; height: 80px; border-radius: var(--radius) var(--radius) 0 0; overflow: hidden; position: absolute; top: 0; left: 0; }
 .usecase-image-strip img { width: 100%; height: 100%; object-fit: cover; }
 .usecase-image-strip::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(250,248,246,0.9), transparent 60%); }
-.usecase-flip-card .flip-card-front { padding-top: 96px; position: relative; }
+.usecase-flip-card .flip-card-front { padding-top: 96px; overflow: hidden; }
 
 /* Team Flip Cards */
 .team-flip-card { perspective: 1000px; height: 360px; }
