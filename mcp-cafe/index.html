@@ -42,9 +42,9 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);min-height:1
 .header-neon .glow{width:6px;height:6px;border-radius:50%;background:#95e1a0;box-shadow:0 0 10px #95e1a0;animation:pulse 1.5s infinite}
 
 /* ===== LOADING SCREEN ===== */
-.loading-screen{position:fixed;inset:0;background:linear-gradient(135deg,#ff6b9d,#ffa94d);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;animation:loadingOut 0.6s ease forwards;animation-delay:1.8s}
-.loading-screen.hide{display:none}
-@keyframes loadingOut{from{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(1.1)}}
+.loading-screen{position:fixed;inset:0;background:linear-gradient(135deg,#ff6b9d,#ffa94d);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999;animation:loadingOut 0.5s ease forwards;animation-delay:1.2s;pointer-events:none}
+.loading-screen.hide{display:none;pointer-events:none}
+@keyframes loadingOut{from{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(1.1);pointer-events:none}}
 .loading-cup{font-size:4rem;position:relative;animation:cupBounce 0.6s cubic-bezier(0.34,1.56,0.64,1) infinite}
 @keyframes cupBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
 .loading-steam{position:relative;display:flex;gap:6px;margin-top:-10px;margin-bottom:16px}
@@ -489,10 +489,10 @@ input.addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById(
 document.querySelectorAll('.cmd').forEach(el=>{el.addEventListener('click',()=>{input.value=el.dataset.cmd;document.getElementById('send').click()})});
 
 // Remove loading screen
-setTimeout(()=>{document.getElementById('loadingScreen').classList.add('hide');setTimeout(()=>document.getElementById('loadingScreen').remove(),600)},2200);
+setTimeout(()=>{const ls=document.getElementById('loadingScreen');if(ls){ls.classList.add('hide');setTimeout(()=>ls.remove(),400)}document.getElementById('input').focus()},1400);
 
 // Welcome
-setTimeout(()=>{addMsg(`💖 Hey! Welcome to <strong style="color:var(--pink)">MCP Cafe</strong>!<br><br>I'm <strong class="c">Barista Byte</strong> 👨‍🍳 — your MCP-powered barista!<br><br>Try typing <code style="background:var(--bg);padding:2px 6px;border-radius:3px">menu</code>, <code style="background:var(--bg);padding:2px 6px;border-radius:3px">order latte</code>, or just a drink name like <code style="background:var(--bg);padding:2px 6px;border-radius:3px">matcha</code>!<br><br>Watch the <strong>MCP flow panel</strong> light up ✨`)},2400);
+setTimeout(()=>{addMsg(`💖 Hey! Welcome to <strong style="color:var(--pink)">MCP Cafe</strong>!<br><br>I'm <strong class="c">Barista Byte</strong> 👨‍🍳 — your MCP-powered barista!<br><br>Try typing <code style="background:var(--bg);padding:2px 6px;border-radius:3px">menu</code>, <code style="background:var(--bg);padding:2px 6px;border-radius:3px">order latte</code>, or just a drink name like <code style="background:var(--bg);padding:2px 6px;border-radius:3px">matcha</code>!<br><br>Watch the <strong>MCP flow panel</strong> light up ✨`)},1600);
 </script>
 </body>
 </html>
