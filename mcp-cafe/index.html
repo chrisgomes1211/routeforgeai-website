@@ -544,11 +544,30 @@ async function handleCommand(text){
       </div>`;
 
   }else{
-    addFlowArrow();
-    addFlowStep('❓','Client','Intent unknown — showing available options','client');
-    playError();
-    baristaMood('🤔');
-    response=`<span style="color:var(--text-dim)">Hmm, not sure what that means! Try <code style="background:var(--bg);padding:2px 6px;border-radius:3px">help</code> to see what I can do.</span>`;
+    // Check if it's a menu item name typed directly
+    const menuItem=MENU.find(i=>i.name.toLowerCase()===lower||i.name.toLowerCase().includes(lower)||lower.includes(i.name.toLowerCase()));
+    if(menuItem){
+      addFlowArrow();
+      addPacket(`📦 REQ → mcp-cafe://ingredients/${menuItem.name}`);
+      addFlowStep('🖥','Server [Resource]','Matched menu item: '+menuItem.name,'server');
+      addFlowStep('📋','Resource',`Found "${menuItem.name}" in menu`,'resource');
+      const ings=menuItem.ingredients.length===1&&menuItem.ingredients[0]==='varies daily'?['Changes daily! Ask the barista.']:menuItem.ingredients;
+      label=`🔬 ${menuItem.emoji} ${menuItem.name}`;
+      response=`<div class="g">✅ I found <strong>${menuItem.emoji} ${menuItem.name}</strong> on the menu!</div>
+        <div style="margin-top:6px;padding:6px 0">${menuItem.desc}</div>
+        <div style="margin-top:4px;font-size:0.75rem;color:var(--text-dim)">$${menuItem.price.toFixed(2)}</div>
+        <div style="margin-top:6px;border-top:1px solid var(--border-light);padding-top:6px;font-size:0.75rem">
+        <span class="o">Ingredients:</span><br>
+        ${ings.map(ing=>'• '+ing).join('<br>')}
+        </div>
+        <div style="margin-top:8px;font-size:0.78rem">Want one? <span class="cmd" style="display:inline-block;padding:3px 10px;font-size:0.75rem" onclick="document.getElementById('input').value='order ${menuItem.name}';document.getElementById('send').click()">☕ order ${menuItem.name}</span></div>`;
+    }else{
+      addFlowArrow();
+      addFlowStep('❓','Client','Intent unknown — showing available options','client');
+      playError();
+      baristaMood('🤔');
+      response=`<span style="color:var(--text-dim)">Hmm, not sure what that means! Try <code style="background:var(--bg);padding:2px 6px;border-radius:3px">help</code> to see what I can do.</span>`;
+    }
   }
 
   // Response flows back
